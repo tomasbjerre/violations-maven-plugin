@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>se.bjurr.violations</groupId>
+	<artifactId>plugin-example</artifactId>
+	<name>plugin-example</name>
+	<version>1.0-SNAPSHOT</version>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.target>1.6</maven.compiler.target>
+		<maven.compiler.source>1.6</maven.compiler.source>
+	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>se.bjurr.violations</groupId>
+				<artifactId>violations-maven-plugin</artifactId>
+				<version>1.0-SNAPSHOT</version>
+				<configuration>
+					<maxViolations>99999999</maxViolations>
+					<minSeverity>INFO</minSeverity>
+					<!-- PER_FILE_COMPACT, COMPACT or VERBOSE -->
+					<detailLevel>VERBOSE</detailLevel>
+					<violations>
+						<violation>
+							<parser>FINDBUGS</parser>
+							<reporter>Findbugs</reporter>
+							<folder>.</folder>
+							<pattern>.*/findbugs/.*\.xml$</pattern>
+						</violation>
+						<violation>
+							<parser>PMD</parser>
+							<reporter>PMD</reporter>
+							<folder>.</folder>
+							<pattern>.*/pmd/.*\.xml$</pattern>
+						</violation>
+						<violation>
+							<parser>CHECKSTYLE</parser>
+							<reporter>Checkstyle</reporter>
+							<folder>.</folder>
+							<pattern>.*/checkstyle/.*\.xml$</pattern>
+						</violation>
+						<violation>
+							<parser>JSHINT</parser>
+							<reporter>JSHint</reporter>
+							<folder>.</folder>
+							<pattern>.*/jshint/.*\.xml$</pattern>
+						</violation>
+						<violation>
+							<parser>CSSLINT</parser>
+							<reporter>CSSLint</reporter>
+							<folder>.</folder>
+							<pattern>.*/csslint/.*\.xml$</pattern>
+						</violation>
+					</violations>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
