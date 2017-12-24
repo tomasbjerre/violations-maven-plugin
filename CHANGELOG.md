@@ -7,6 +7,6 @@ Changelog of Violations Maven plugin.
 **Initial**
 
 
-[9ddf1321205fbfa](https://github.com/tomasbjerre/violations-maven-plugin/commit/9ddf1321205fbfa) Tomas Bjerre *2017-12-24 15:46:50*
+[fc250914fecc042](https://github.com/tomasbjerre/violations-maven-plugin/commit/fc250914fecc042) Tomas Bjerre *2017-12-24 16:02:07*
 
 

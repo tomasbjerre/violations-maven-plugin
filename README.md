@@ -99,7 +99,7 @@ Here is an example:
 			<plugin>
 				<groupId>se.bjurr.violations</groupId>
 				<artifactId>violations-maven-plugin</artifactId>
-				<version>1.0-SNAPSHOT</version>
+				<version>1.0</version>
 				<configuration>
 					<maxViolations>99999999</maxViolations>
 					<minSeverity>INFO</minSeverity>
