@@ -40,7 +40,8 @@ Summary
 [INFO] Finished at: 2017-12-24T16:58:54+01:00
 [INFO] Final Memory: 8M/303M
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal se.bjurr.violations:violations-maven-plugin:1.0-SNAPSHOT:violations (default-cli) on project plugin-example: To many violations found, max is 2 but found 15 -> [Help 1]
+[ERROR] Failed to execute goal se.bjurr.violations:violations-maven-plugin:1.0-SNAPSHOT:violations (default-cli)
+ on project plugin-example: To many violations found, max is 2 but found 15 -> [Help 1]
 ...
 ```
 
@@ -93,27 +94,34 @@ It supports:
 ## Usage ##
 There is a running example [here](https://github.com/tomasbjerre/violations-maven-plugin/tree/master/violations-maven-plugin-example).
 
-Here is an example: 
+The plugin needs to run after any static code analysis tools, so put it after them in the pom. Having the following in the pom will make the plugin run with `mvn verify`: 
 
 ```
-			<plugin>
-				<groupId>se.bjurr.violations</groupId>
-				<artifactId>violations-maven-plugin</artifactId>
-				<version>1.0</version>
-				<configuration>
-					<maxViolations>99999999</maxViolations>
-					<minSeverity>INFO</minSeverity>
-					<!-- PER_FILE_COMPACT, COMPACT or VERBOSE -->
-					<detailLevel>VERBOSE</detailLevel>
-					<violations>
-						<violation>
-							<parser>FINDBUGS</parser>
-							<reporter>Findbugs</reporter>
-							<folder>.</folder>
-							<pattern>.*/findbugs/.*\.xml$</pattern>
-						</violation>
-...
-					</violations>
-				</configuration>
-			</plugin>
+<plugin>
+	<groupId>se.bjurr.violations</groupId>
+	<artifactId>violations-maven-plugin</artifactId>
+	<version>1.1</version>
+	<executions>
+		<execution>
+			<phase>verify</phase>
+			<goals>
+				<goal>violations</goal>
+			</goals>
+			<configuration>
+				<maxViolations>99999999</maxViolations>
+				<minSeverity>INFO</minSeverity>
+				<!-- PER_FILE_COMPACT, COMPACT or VERBOSE -->
+				<detailLevel>VERBOSE</detailLevel>
+				<violations>
+					<violation>
+						<parser>FINDBUGS</parser>
+						<reporter>Findbugs</reporter>
+						<folder>.</folder>
+						<pattern>.*/findbugs/.*\.xml$</pattern>
+					</violation>
+				</violations>
+			</configuration>
+		</execution>
+	</executions>
+</plugin>
 ```

@@ -16,45 +16,53 @@
 			<plugin>
 				<groupId>se.bjurr.violations</groupId>
 				<artifactId>violations-maven-plugin</artifactId>
-				<version>1.1-SNAPSHOT</version>
-				<configuration>
-					<maxViolations>99999999</maxViolations>
-					<minSeverity>INFO</minSeverity>
-					<!-- PER_FILE_COMPACT, COMPACT or VERBOSE -->
-					<detailLevel>VERBOSE</detailLevel>
-					<violations>
-						<violation>
-							<parser>FINDBUGS</parser>
-							<reporter>Findbugs</reporter>
-							<folder>.</folder>
-							<pattern>.*/findbugs/.*\.xml$</pattern>
-						</violation>
-						<violation>
-							<parser>PMD</parser>
-							<reporter>PMD</reporter>
-							<folder>.</folder>
-							<pattern>.*/pmd/.*\.xml$</pattern>
-						</violation>
-						<violation>
-							<parser>CHECKSTYLE</parser>
-							<reporter>Checkstyle</reporter>
-							<folder>.</folder>
-							<pattern>.*/checkstyle/.*\.xml$</pattern>
-						</violation>
-						<violation>
-							<parser>JSHINT</parser>
-							<reporter>JSHint</reporter>
-							<folder>.</folder>
-							<pattern>.*/jshint/.*\.xml$</pattern>
-						</violation>
-						<violation>
-							<parser>CSSLINT</parser>
-							<reporter>CSSLint</reporter>
-							<folder>.</folder>
-							<pattern>.*/csslint/.*\.xml$</pattern>
-						</violation>
-					</violations>
-				</configuration>
+				<version>1.2-SNAPSHOT</version>
+				<executions>
+					<execution>
+						<phase>verify</phase>
+						<goals>
+							<goal>violations</goal>
+						</goals>
+						<configuration>
+							<maxViolations>99999999</maxViolations>
+							<minSeverity>INFO</minSeverity>
+							<!-- PER_FILE_COMPACT, COMPACT or VERBOSE -->
+							<detailLevel>VERBOSE</detailLevel>
+							<violations>
+								<violation>
+									<parser>FINDBUGS</parser>
+									<reporter>Findbugs</reporter>
+									<folder>.</folder>
+									<pattern>.*/findbugs/.*\.xml$</pattern>
+								</violation>
+								<violation>
+									<parser>PMD</parser>
+									<reporter>PMD</reporter>
+									<folder>.</folder>
+									<pattern>.*/pmd/.*\.xml$</pattern>
+								</violation>
+								<violation>
+									<parser>CHECKSTYLE</parser>
+									<reporter>Checkstyle</reporter>
+									<folder>.</folder>
+									<pattern>.*/checkstyle/.*\.xml$</pattern>
+								</violation>
+								<violation>
+									<parser>JSHINT</parser>
+									<reporter>JSHint</reporter>
+									<folder>.</folder>
+									<pattern>.*/jshint/.*\.xml$</pattern>
+								</violation>
+								<violation>
+									<parser>CSSLINT</parser>
+									<reporter>CSSLint</reporter>
+									<folder>.</folder>
+									<pattern>.*/csslint/.*\.xml$</pattern>
+								</violation>
+							</violations>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>

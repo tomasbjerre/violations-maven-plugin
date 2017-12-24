@@ -1,6 +1,6 @@
 package se.bjurr.violations.maven.plugin;
 
-import static org.apache.maven.plugins.annotations.LifecyclePhase.PACKAGE;
+import static org.apache.maven.plugins.annotations.LifecyclePhase.VERIFY;
 import static se.bjurr.violations.lib.ViolationsApi.violationsApi;
 import static se.bjurr.violations.lib.ViolationsReporterApi.violationsReporterApi;
 
@@ -17,19 +17,19 @@ import se.bjurr.violations.lib.model.SEVERITY;
 import se.bjurr.violations.lib.model.Violation;
 import se.bjurr.violations.lib.util.Filtering;
 
-@Mojo(name = "violations", defaultPhase = PACKAGE)
+@Mojo(name = "violations", defaultPhase = VERIFY)
 public class ViolationCommentsMojo extends AbstractMojo {
 
   @Parameter(property = "violations", required = true)
   private List<ViolationConfig> violations;
 
-  @Parameter(property = "minSeverity", required = false, defaultValue="INFO")
+  @Parameter(property = "minSeverity", required = false, defaultValue = "INFO")
   private SEVERITY minSeverity;
 
-  @Parameter(property = "detailLevel", required = false, defaultValue="VERBOSE")
+  @Parameter(property = "detailLevel", required = false, defaultValue = "VERBOSE")
   private ViolationsReporterDetailLevel detailLevel;
 
-  @Parameter(property = "maxViolations", required = false, defaultValue="999999")
+  @Parameter(property = "maxViolations", required = false, defaultValue = "999999")
   private Integer maxViolations;
 
   @Override

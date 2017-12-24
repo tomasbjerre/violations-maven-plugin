@@ -1,8 +1,13 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
-## Unreleased
+## violations-maven-plugin-1.1
 ### No issue
+
+**Removing final from attributes**
+
+
+[4d30b3ea01788db](https://github.com/tomasbjerre/violations-maven-plugin/commit/4d30b3ea01788db) Tomas Bjerre *2017-12-24 17:24:06*
 
 **Doc**
 
