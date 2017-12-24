@@ -1,10 +1,8 @@
 package se.bjurr.violations.maven.plugin;
 
-import static org.apache.maven.plugins.annotations.LifecyclePhase.NONE;
+import static org.apache.maven.plugins.annotations.LifecyclePhase.PACKAGE;
 import static se.bjurr.violations.lib.ViolationsApi.violationsApi;
 import static se.bjurr.violations.lib.ViolationsReporterApi.violationsReporterApi;
-import static se.bjurr.violations.lib.ViolationsReporterDetailLevel.VERBOSE;
-import static se.bjurr.violations.lib.model.SEVERITY.INFO;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,20 +17,20 @@ import se.bjurr.violations.lib.model.SEVERITY;
 import se.bjurr.violations.lib.model.Violation;
 import se.bjurr.violations.lib.util.Filtering;
 
-@Mojo(name = "violations", defaultPhase = NONE)
+@Mojo(name = "violations", defaultPhase = PACKAGE)
 public class ViolationCommentsMojo extends AbstractMojo {
 
-  @Parameter(property = "violations", required = false)
-  private final List<ViolationConfig> violations = new ArrayList<ViolationConfig>();
+  @Parameter(property = "violations", required = true)
+  private List<ViolationConfig> violations;
 
-  @Parameter(property = "minSeverity", required = false)
-  private final SEVERITY minSeverity = INFO;
+  @Parameter(property = "minSeverity", required = false, defaultValue="INFO")
+  private SEVERITY minSeverity;
 
-  @Parameter(property = "detailLevel", required = false)
-  private final ViolationsReporterDetailLevel detailLevel = VERBOSE;
+  @Parameter(property = "detailLevel", required = false, defaultValue="VERBOSE")
+  private ViolationsReporterDetailLevel detailLevel;
 
-  @Parameter(property = "maxViolations", required = false)
-  private final Integer maxViolations = Integer.MAX_VALUE;
+  @Parameter(property = "maxViolations", required = false, defaultValue="999999")
+  private Integer maxViolations;
 
   @Override
   public void execute() throws MojoExecutionException {
