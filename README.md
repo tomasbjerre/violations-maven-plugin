@@ -1,6 +1,6 @@
 # Violations Maven Plugin
 [![Build Status](https://travis-ci.org/tomasbjerre/violations-maven-plugin.svg?branch=master)](https://travis-ci.org/tomasbjerre/violations-maven-plugin)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/se.bjurr.violations/violations-Maven-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/se.bjurr.violations/violations-maven-plugin)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/se.bjurr.violations/violations-maven-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/se.bjurr.violations/violations-maven-plugin)
 [![Bintray](https://api.bintray.com/packages/tomasbjerre/tomasbjerre/se.bjurr.violations%3Aviolations-maven-plugin/images/download.svg)](https://bintray.com/tomasbjerre/tomasbjerre/se.bjurr.violations%3Aviolations-maven-plugin/_latestVersion)
 
 This is a Maven plugin for [Violations Lib](https://github.com/tomasbjerre/violations-lib).
@@ -13,25 +13,40 @@ It can parse results from static code analysis and:
 A snippet of the output may look like this:
 ```
 ...
-Summary of se/bjurr/violations/lib/example/OtherClass.java
+se/bjurr/gitchangelog/internal/settings/Settings.java
+╔══════════╤════════════════╤══════════╤══════╤═════════════════════════════════════════════════════════════════════════════════╗
+║ Reporter │ Rule           │ Severity │ Line │ Message                                                                         ║
+╠══════════╪════════════════╪══════════╪══════╪═════════════════════════════════════════════════════════════════════════════════╣
+║ Findbugs │ EI_EXPOSE_REP2 │ INFO     │ 211  │ May expose internal representation by incorporating reference to mutable object ║
+║          │                │          │      │                                                                                 ║
+║          │                │          │      │                                                                                 ║
+║          │                │          │      │   <p> This code stores a reference to an externally mutable object into the     ║
+║          │                │          │      │   internal representation of the object.&nbsp;                                  ║
+║          │                │          │      │    If instances                                                                 ║
+║          │                │          │      │    are accessed by untrusted code, and unchecked changes to                     ║
+║          │                │          │      │    the mutable object would compromise security or other                        ║
+║          │                │          │      │    important properties, you will need to do something different.               ║
+║          │                │          │      │   Storing a copy of the object is better approach in many situations.</p>       ║
+╚══════════╧════════════════╧══════════╧══════╧═════════════════════════════════════════════════════════════════════════════════╝
+
+Summary of se/bjurr/gitchangelog/internal/settings/Settings.java
 ╔══════════╤══════╤══════╤═══════╤═══════╗
 ║ Reporter │ INFO │ WARN │ ERROR │ Total ║
 ╠══════════╪══════╪══════╪═══════╪═══════╣
-║ Findbugs │ 2    │ 0    │ 0     │ 2     ║
+║ Findbugs │ 1    │ 0    │ 0     │ 1     ║
 ╟──────────┼──────┼──────┼───────┼───────╢
-║          │ 2    │ 0    │ 0     │ 2     ║
+║          │ 1    │ 0    │ 0     │ 1     ║
 ╚══════════╧══════╧══════╧═══════╧═══════╝
 
+
 Summary
-╔════════════╤══════╤══════╤═══════╤═══════╗
-║ Reporter   │ INFO │ WARN │ ERROR │ Total ║
-╠════════════╪══════╪══════╪═══════╪═══════╣
-║ Checkstyle │ 4    │ 1    │ 1     │ 6     ║
-╟────────────┼──────┼──────┼───────┼───────╢
-║ Findbugs   │ 2    │ 2    │ 5     │ 9     ║
-╟────────────┼──────┼──────┼───────┼───────╢
-║            │ 6    │ 3    │ 6     │ 15    ║
-╚════════════╧══════╧══════╧═══════╧═══════╝
+╔══════════╤══════╤══════╤═══════╤═══════╗
+║ Reporter │ INFO │ WARN │ ERROR │ Total ║
+╠══════════╪══════╪══════╪═══════╪═══════╣
+║ Findbugs │ 27   │ 2    │ 0     │ 29    ║
+╟──────────┼──────┼──────┼───────┼───────╢
+║          │ 27   │ 2    │ 0     │ 29    ║
+╚══════════╧══════╧══════╧═══════╧═══════╝
 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
@@ -41,7 +56,7 @@ Summary
 [INFO] Final Memory: 8M/303M
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal se.bjurr.violations:violations-maven-plugin:1.0-SNAPSHOT:violations (default-cli)
- on project plugin-example: To many violations found, max is 2 but found 15 -> [Help 1]
+ on project plugin-example: To many violations found, max is 2 but found 29 -> [Help 1]
 ...
 ```
 
@@ -97,31 +112,52 @@ There is a running example [here](https://github.com/tomasbjerre/violations-mave
 The plugin needs to run after any static code analysis tools, so put it after them in the pom. Having the following in the pom will make the plugin run with `mvn verify`: 
 
 ```
-<plugin>
-	<groupId>se.bjurr.violations</groupId>
-	<artifactId>violations-maven-plugin</artifactId>
-	<version>1.2</version>
-	<executions>
-		<execution>
-			<phase>verify</phase>
-			<goals>
-				<goal>violations</goal>
-			</goals>
-			<configuration>
-				<maxViolations>99999999</maxViolations>
-				<minSeverity>INFO</minSeverity>
-				<!-- PER_FILE_COMPACT, COMPACT or VERBOSE -->
-				<detailLevel>VERBOSE</detailLevel>
-				<violations>
-					<violation>
-						<parser>FINDBUGS</parser>
-						<reporter>Findbugs</reporter>
-						<folder>.</folder>
-						<pattern>.*/findbugs/.*\.xml$</pattern>
-					</violation>
-				</violations>
-			</configuration>
-		</execution>
-	</executions>
-</plugin>
+  <plugins>
+   <plugin>
+    <groupId>org.codehaus.mojo</groupId>
+    <artifactId>findbugs-maven-plugin</artifactId>
+    <version>3.0.5</version>
+    <configuration>
+     <effort>Max</effort>
+     <threshold>Low</threshold>
+     <xmlOutput>true</xmlOutput>
+     <failOnError>false</failOnError>
+    </configuration>
+    <executions>
+     <execution>
+      <goals>
+       <goal>check</goal>
+      </goals>
+     </execution>
+    </executions>
+   </plugin>
+   <plugin>
+    <groupId>se.bjurr.violations</groupId>
+    <artifactId>violations-maven-plugin</artifactId>
+    <version>X</version>
+    <configuration>
+     <maxViolations>99999999</maxViolations>
+     <minSeverity>INFO</minSeverity>
+     <!-- PER_FILE_COMPACT, COMPACT or VERBOSE -->
+     <detailLevel>VERBOSE</detailLevel>
+     <violations>
+      <violation>
+       <!-- Many more formats available, see: https://github.com/tomasbjerre/violations-lib -->
+       <parser>FINDBUGS</parser>
+       <reporter>Findbugs</reporter>
+       <folder>.</folder>
+       <pattern>.*/findbugsXml.*\.xml$</pattern>
+      </violation>
+     </violations>
+    </configuration>
+    <executions>
+     <execution>
+      <phase>verify</phase>
+      <goals>
+       <goal>violations</goal>
+      </goals>
+     </execution>
+    </executions>
+   </plugin>
+  </plugins>
 ```

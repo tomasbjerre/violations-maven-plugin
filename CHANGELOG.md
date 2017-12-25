@@ -4,6 +4,20 @@ Changelog of Violations Maven plugin.
 ## Unreleased
 ### No issue
 
+**Limiting width**
+
+
+[8e7428f8bf184ef](https://github.com/tomasbjerre/violations-maven-plugin/commit/8e7428f8bf184ef) Tomas Bjerre *2017-12-25 19:23:31*
+
+**Doc**
+
+
+[cbc97a242c7b58b](https://github.com/tomasbjerre/violations-maven-plugin/commit/cbc97a242c7b58b) Tomas Bjerre *2017-12-25 06:57:15*
+
+
+## violations-maven-plugin-1.2
+### No issue
+
 **Doc**
 
 
