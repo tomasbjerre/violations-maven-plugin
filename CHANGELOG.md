@@ -1,6 +1,15 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
+## Unreleased
+### No issue
+
+**Doc**
+
+
+[9a0f8f38eb621d7](https://github.com/tomasbjerre/violations-maven-plugin/commit/9a0f8f38eb621d7) Tomas Bjerre *2017-12-25 06:55:07*
+
+
 ## violations-maven-plugin-1.1
 ### No issue
 

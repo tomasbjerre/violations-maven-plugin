@@ -100,7 +100,7 @@ The plugin needs to run after any static code analysis tools, so put it after th
 <plugin>
 	<groupId>se.bjurr.violations</groupId>
 	<artifactId>violations-maven-plugin</artifactId>
-	<version>1.1</version>
+	<version>1.2</version>
 	<executions>
 		<execution>
 			<phase>verify</phase>
