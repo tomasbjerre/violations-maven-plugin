@@ -4,6 +4,11 @@ Changelog of Violations Maven plugin.
 ## Unreleased
 ### No issue
 
+**Check violations in diff**
+
+
+[68c21c4e120db8f](https://github.com/tomasbjerre/violations-maven-plugin/commit/68c21c4e120db8f) Tomas Bjerre *2017-12-30 15:17:47*
+
 **Doc**
 
 

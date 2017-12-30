@@ -3,7 +3,7 @@
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/se.bjurr.violations/violations-maven-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/se.bjurr.violations/violations-maven-plugin)
 [![Bintray](https://api.bintray.com/packages/tomasbjerre/tomasbjerre/se.bjurr.violations%3Aviolations-maven-plugin/images/download.svg)](https://bintray.com/tomasbjerre/tomasbjerre/se.bjurr.violations%3Aviolations-maven-plugin/_latestVersion)
 
-This is a Maven plugin for [Violations Lib](https://github.com/tomasbjerre/violations-lib).
+This is a Maven plugin for [Violations Lib](https://github.com/tomasbjerre/violations-lib). There is also a [Gradle plugin](https://github.com/tomasbjerre/violations-gradle-plugin) for this.
 
 It can parse results from static code analysis and:
 
