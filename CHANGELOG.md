@@ -1,7 +1,7 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
-## Unreleased
+## violations-maven-plugin-1.4
 ### No issue
 
 **Check violations in diff**
