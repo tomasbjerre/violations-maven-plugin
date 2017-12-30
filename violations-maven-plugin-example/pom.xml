@@ -24,10 +24,29 @@
 							<goal>violations</goal>
 						</goals>
 						<configuration>
-							<maxViolations>99999999</maxViolations>
+							<!-- INFO, WARN or ERROR -->
 							<minSeverity>INFO</minSeverity>
 							<!-- PER_FILE_COMPACT, COMPACT or VERBOSE -->
 							<detailLevel>VERBOSE</detailLevel>
+							<!-- Will fail the build if total number of found violations is higher -->
+							<maxViolations>99999999</maxViolations>
+							<!-- Will print violations found in diff -->
+							<printViolations>true</printViolations>
+
+							<!-- Can be empty (ignored), Git-commit or any Git-reference -->
+							<diffFrom></diffFrom>
+							<!-- Same as above -->
+							<diffTo></diffTo>
+							<!-- INFO, WARN or ERROR -->
+							<diffMinSeverity>INFO</diffMinSeverity>
+							<!-- PER_FILE_COMPACT, COMPACT or VERBOSE -->
+							<diffDetailLevel>VERBOSE</diffDetailLevel>
+							<!-- Will fail the build if number of violations, in the diff within from/to, is higher -->
+							<diffMaxViolations>99</diffMaxViolations>
+							<!-- Will print violations found in diff -->
+							<diffPrintViolations>true</diffPrintViolations>
+							<!-- Where to look for Git -->
+							<gitRepo>.</gitRepo>
 							<violations>
 								<violation>
 									<parser>FINDBUGS</parser>
