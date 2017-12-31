@@ -1,6 +1,15 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
+## Unreleased
+### No issue
+
+**Relocating to correct Java identifier**
+
+
+[9a90734ec0e9235](https://github.com/tomasbjerre/violations-maven-plugin/commit/9a90734ec0e9235) Tomas Bjerre *2017-12-30 18:51:13*
+
+
 ## violations-maven-plugin-1.4
 ### No issue
 
