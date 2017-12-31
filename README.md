@@ -117,7 +117,21 @@ The plugin needs to run after any static code analysis tools, so put it after th
     <groupId>org.codehaus.mojo</groupId>
     <artifactId>findbugs-maven-plugin</artifactId>
     <version>3.0.5</version>
+    <executions>
+     <execution>
+      <goals>
+       <goal>check</goal>
+      </goals>
+     </execution>
+    </executions>
+   </plugin>
+   <plugin>
+    <groupId>se.bjurr.violations</groupId>
+    <artifactId>violations-maven-plugin</artifactId>
+    <version>X</version>
     <configuration>
+     <!-- Global configuration, remove if you dont want to report violations 
+          for the entire repo. -->
      <!-- INFO, WARN or ERROR -->
      <minSeverity>INFO</minSeverity>
      <!-- PER_FILE_COMPACT, COMPACT or VERBOSE -->
@@ -126,7 +140,10 @@ The plugin needs to run after any static code analysis tools, so put it after th
      <maxViolations>99999999</maxViolations>
      <!-- Will print violations found in diff -->
      <printViolations>true</printViolations>
-
+     
+     
+     <!-- Diff configuration, remove if you dont want to report violations 
+          for files changed between specific revisions. -->
      <!-- Can be empty (ignored), Git-commit or any Git-reference -->
      <diffFrom></diffFrom>
      <!-- Same as above -->
@@ -141,27 +158,12 @@ The plugin needs to run after any static code analysis tools, so put it after th
      <diffPrintViolations>true</diffPrintViolations>
      <!-- Where to look for Git -->
      <gitRepo>.</gitRepo>
-    </configuration>
-    <executions>
-     <execution>
-      <goals>
-       <goal>check</goal>
-      </goals>
-     </execution>
-    </executions>
-   </plugin>
-   <plugin>
-    <groupId>se.bjurr.violations</groupId>
-    <artifactId>violations-maven-plugin</artifactId>
-    <version>X</version>
-    <configuration>
-     <maxViolations>99999999</maxViolations>
-     <minSeverity>INFO</minSeverity>
-     <!-- PER_FILE_COMPACT, COMPACT or VERBOSE -->
-     <detailLevel>VERBOSE</detailLevel>
+     
+     
+     <!-- This is mandatory regardless of if you want to report violations 
+          between revisions or the entire repo. -->
      <violations>
       <violation>
-       <!-- Many more formats available, see: https://github.com/tomasbjerre/violations-lib -->
        <parser>FINDBUGS</parser>
        <reporter>Findbugs</reporter>
        <folder>.</folder>

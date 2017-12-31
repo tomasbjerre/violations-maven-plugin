@@ -1,8 +1,13 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
-## Unreleased
+## violations-maven-plugin-1.5
 ### No issue
+
+**Un-escape XML when reading attributes**
+
+
+[fa2682c71497278](https://github.com/tomasbjerre/violations-maven-plugin/commit/fa2682c71497278) Tomas Bjerre *2017-12-31 06:08:07*
 
 **Relocating to correct Java identifier**
 
