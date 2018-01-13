@@ -130,6 +130,14 @@ The plugin needs to run after any static code analysis tools, so put it after th
     <artifactId>violations-maven-plugin</artifactId>
     <version>X</version>
     <configuration>
+     <!-- Optional config -->
+     <!-- 0 is disabled -->
+     <maxReporterColumnWidth>0</maxReporterColumnWidth>
+     <maxRuleColumnWidth>10</maxRuleColumnWidth>
+     <maxSeverityColumnWidth>0</maxSeverityColumnWidth>
+     <maxLineColumnWidth>0</maxLineColumnWidth>
+     <maxMessageColumnWidth>50</maxMessageColumnWidth>
+     
      <!-- Global configuration, remove if you dont want to report violations 
           for the entire repo. -->
      <!-- INFO, WARN or ERROR -->

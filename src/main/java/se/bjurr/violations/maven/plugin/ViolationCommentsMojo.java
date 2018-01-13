@@ -60,6 +60,21 @@ public class ViolationCommentsMojo extends AbstractMojo {
   @Parameter(property = "gitRepo", required = false, defaultValue = ".")
   private File gitRepo;
 
+  @Parameter(property = "maxLineColumnWidth", required = false, defaultValue = "0")
+  private int maxLineColumnWidth;
+
+  @Parameter(property = "maxMessageColumnWidth", required = false, defaultValue = "50")
+  private int maxMessageColumnWidth;
+
+  @Parameter(property = "maxReporterColumnWidth", required = false, defaultValue = "0")
+  private int maxReporterColumnWidth;
+
+  @Parameter(property = "maxRuleColumnWidth", required = false, defaultValue = "10")
+  private int maxRuleColumnWidth;
+
+  @Parameter(property = "maxSeverityColumnWidth", required = false, defaultValue = "0")
+  private int maxSeverityColumnWidth;
+
   @Override
   public void execute() throws MojoExecutionException {
     try {
@@ -99,6 +114,11 @@ public class ViolationCommentsMojo extends AbstractMojo {
     final String report =
         violationsReporterApi() //
             .withViolations(violations) //
+            .withMaxLineColumnWidth(maxLineColumnWidth) //
+            .withMaxMessageColumnWidth(maxMessageColumnWidth) //
+            .withMaxReporterColumnWidth(maxReporterColumnWidth) //
+            .withMaxRuleColumnWidth(maxRuleColumnWidth) //
+            .withMaxSeverityColumnWidth(maxSeverityColumnWidth) //
             .getReport(detailLevel);
 
     if (tooManyViolations) {
@@ -125,6 +145,11 @@ public class ViolationCommentsMojo extends AbstractMojo {
     final String report =
         violationsReporterApi() //
             .withViolations(violations) //
+            .withMaxLineColumnWidth(maxLineColumnWidth) //
+            .withMaxMessageColumnWidth(maxMessageColumnWidth) //
+            .withMaxReporterColumnWidth(maxReporterColumnWidth) //
+            .withMaxRuleColumnWidth(maxRuleColumnWidth) //
+            .withMaxSeverityColumnWidth(maxSeverityColumnWidth) //
             .getReport(diffDetailLevel);
 
     if (tooManyViolations) {
