@@ -1,6 +1,15 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
+## violations-maven-plugin-1.6
+### No issue
+
+**Parameterize max width of reporter table**
+
+
+[f9382bf0c16fec8](https://github.com/tomasbjerre/violations-maven-plugin/commit/f9382bf0c16fec8) Tomas Bjerre *2018-01-13 19:38:39*
+
+
 ## violations-maven-plugin-1.5
 ### No issue
 
