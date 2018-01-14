@@ -16,7 +16,7 @@
 			<plugin>
 				<groupId>se.bjurr.violations</groupId>
 				<artifactId>violations-maven-plugin</artifactId>
-				<version>1.7-SNAPSHOT</version>
+				<version>1.8-SNAPSHOT</version>
 				<executions>
 					<execution>
 						<phase>verify</phase>

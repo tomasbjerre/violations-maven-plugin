@@ -1,6 +1,20 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
+## violations-maven-plugin-1.7
+### No issue
+
+**Google error-prone**
+
+
+[b622a43454ea975](https://github.com/tomasbjerre/violations-maven-plugin/commit/b622a43454ea975) Tomas Bjerre *2018-01-14 11:30:57*
+
+**Doc**
+
+
+[150ccb01d9fa614](https://github.com/tomasbjerre/violations-maven-plugin/commit/150ccb01d9fa614) Tomas Bjerre *2018-01-14 07:12:02*
+
+
 ## violations-maven-plugin-1.6
 ### No issue
 
