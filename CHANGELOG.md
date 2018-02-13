@@ -1,6 +1,15 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
+## Unreleased
+### No issue
+
+**PCLint**
+
+
+[a9dcfb711271b21](https://github.com/tomasbjerre/violations-maven-plugin/commit/a9dcfb711271b21) Tomas Bjerre *2018-02-13 18:40:45*
+
+
 ## violations-maven-plugin-1.7
 ### No issue
 
