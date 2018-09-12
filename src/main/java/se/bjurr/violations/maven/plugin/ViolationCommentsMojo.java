@@ -2,7 +2,7 @@ package se.bjurr.violations.maven.plugin;
 
 import static org.apache.maven.plugins.annotations.LifecyclePhase.VERIFY;
 import static se.bjurr.violations.lib.ViolationsApi.violationsApi;
-import static se.bjurr.violations.lib.ViolationsReporterApi.violationsReporterApi;
+import static se.bjurr.violations.git.ViolationsReporterApi.violationsReporterApi;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -16,7 +16,7 @@ import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 
 import se.bjurr.violations.git.ViolationsGit;
-import se.bjurr.violations.lib.ViolationsReporterDetailLevel;
+import se.bjurr.violations.git.ViolationsReporterDetailLevel;
 import se.bjurr.violations.lib.model.SEVERITY;
 import se.bjurr.violations.lib.model.Violation;
 import se.bjurr.violations.lib.util.Filtering;

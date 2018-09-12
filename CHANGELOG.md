@@ -4,6 +4,20 @@ Changelog of Violations Maven plugin.
 ## Unreleased
 ### No issue
 
+**Updating readme with parsers**
+
+
+[f257850280bf8e9](https://github.com/tomasbjerre/violations-maven-plugin/commit/f257850280bf8e9) Tomas Bjerre *2018-09-12 17:04:41*
+
+**NullAway**
+
+
+[5ee1411d3effd1c](https://github.com/tomasbjerre/violations-maven-plugin/commit/5ee1411d3effd1c) Tomas Bjerre *2018-04-14 05:51:36*
+
+
+## violations-maven-plugin-1.8
+### No issue
+
 **PCLint**
 
 
