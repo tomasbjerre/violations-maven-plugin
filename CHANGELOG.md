@@ -1,8 +1,13 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
-## Unreleased
+## violations-maven-plugin-1.9
 ### No issue
+
+**Removing Fliptables dependency**
+
+
+[01744d7eaee5b74](https://github.com/tomasbjerre/violations-maven-plugin/commit/01744d7eaee5b74) Tomas Bjerre *2018-09-12 20:35:25*
 
 **Updating readme with parsers**
 

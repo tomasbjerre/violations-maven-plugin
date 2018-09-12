@@ -10,13 +10,14 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.target>1.6</maven.compiler.target>
 		<maven.compiler.source>1.6</maven.compiler.source>
+                <violations.version>1.10-SNAPSHOT</violations.version>
 	</properties>
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>se.bjurr.violations</groupId>
 				<artifactId>violations-maven-plugin</artifactId>
-				<version>1.9-SNAPSHOT</version>
+				<version>${violations.version}</version>
 				<executions>
 					<execution>
 						<phase>verify</phase>
