@@ -1,6 +1,15 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
+## violations-maven-plugin-1.10
+### No issue
+
+**YAMLLint**
+
+
+[8f541d81ab36ff8](https://github.com/tomasbjerre/violations-maven-plugin/commit/8f541d81ab36ff8) Tomas Bjerre *2018-09-15 07:47:44*
+
+
 ## violations-maven-plugin-1.9
 ### No issue
 
