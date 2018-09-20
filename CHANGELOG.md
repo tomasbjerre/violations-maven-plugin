@@ -1,6 +1,15 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
+## violations-maven-plugin-1.13
+### No issue
+
+**Correcting Kotlin parsers**
+
+
+[14c68befd72502b](https://github.com/tomasbjerre/violations-maven-plugin/commit/14c68befd72502b) Tomas Bjerre *2018-09-20 23:47:03*
+
+
 ## violations-maven-plugin-1.12
 ### No issue
 
