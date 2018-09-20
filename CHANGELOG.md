@@ -1,6 +1,24 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
+## violations-maven-plugin-1.12
+### No issue
+
+**Kotlin Maven and Gradle parsers**
+
+
+[9c427c7f94f02a7](https://github.com/tomasbjerre/violations-maven-plugin/commit/9c427c7f94f02a7) Tomas Bjerre *2018-09-20 14:02:09*
+
+
+## violations-maven-plugin-1.11
+### No issue
+
+**Fix optional rule in YAMLLint**
+
+
+[90716dd89046459](https://github.com/tomasbjerre/violations-maven-plugin/commit/90716dd89046459) Tomas Bjerre *2018-09-17 13:18:46*
+
+
 ## violations-maven-plugin-1.10
 ### No issue
 
