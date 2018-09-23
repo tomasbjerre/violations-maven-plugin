@@ -144,62 +144,65 @@ The plugin needs to run after any static code analysis tools, so put it after th
     <groupId>se.bjurr.violations</groupId>
     <artifactId>violations-maven-plugin</artifactId>
     <version>X</version>
-    <configuration>
-     <!-- Optional config -->
-     <!-- 0 is disabled -->
-     <maxReporterColumnWidth>0</maxReporterColumnWidth>
-     <maxRuleColumnWidth>10</maxRuleColumnWidth>
-     <maxSeverityColumnWidth>0</maxSeverityColumnWidth>
-     <maxLineColumnWidth>0</maxLineColumnWidth>
-     <maxMessageColumnWidth>50</maxMessageColumnWidth>
-     
-     <!-- Global configuration, remove if you dont want to report violations 
-          for the entire repo. -->
-     <!-- INFO, WARN or ERROR -->
-     <minSeverity>INFO</minSeverity>
-     <!-- PER_FILE_COMPACT, COMPACT or VERBOSE -->
-     <detailLevel>VERBOSE</detailLevel>
-     <!-- Will fail the build if total number of found violations is higher -->
-     <maxViolations>99999999</maxViolations>
-     <!-- Will print violations found in diff -->
-     <printViolations>true</printViolations>
-     
-     
-     <!-- Diff configuration, remove if you dont want to report violations 
-          for files changed between specific revisions. -->
-     <!-- Can be empty (ignored), Git-commit or any Git-reference -->
-     <diffFrom></diffFrom>
-     <!-- Same as above -->
-     <diffTo></diffTo>
-     <!-- INFO, WARN or ERROR -->
-     <diffMinSeverity>INFO</diffMinSeverity>
-     <!-- PER_FILE_COMPACT, COMPACT or VERBOSE -->
-     <diffDetailLevel>VERBOSE</diffDetailLevel>
-     <!-- Will fail the build if number of violations, in the diff within from/to, is higher -->
-     <diffMaxViolations>99</diffMaxViolations>
-     <!-- Will print violations found in diff -->
-     <diffPrintViolations>true</diffPrintViolations>
-     <!-- Where to look for Git -->
-     <gitRepo>.</gitRepo>
-     
-     
-     <!-- This is mandatory regardless of if you want to report violations 
-          between revisions or the entire repo. -->
-     <violations>
-      <violation>
-       <parser>FINDBUGS</parser>
-       <reporter>Findbugs</reporter>
-       <folder>.</folder>
-       <pattern>.*/findbugsXml.*\.xml$</pattern>
-      </violation>
-     </violations>
-    </configuration>
     <executions>
      <execution>
       <phase>verify</phase>
       <goals>
        <goal>violations</goal>
       </goals>
+      <configuration>
+       <!-- Optional config -->
+       <!-- 0 is disabled -->
+       <maxReporterColumnWidth>0</maxReporterColumnWidth>
+       <maxRuleColumnWidth>10</maxRuleColumnWidth>
+       <maxSeverityColumnWidth>0</maxSeverityColumnWidth>
+       <maxLineColumnWidth>0</maxLineColumnWidth>
+       <maxMessageColumnWidth>50</maxMessageColumnWidth>
+     
+       <!-- Global configuration, remove if you dont want to report violations 
+            for the entire repo. -->
+       <!-- INFO, WARN or ERROR -->
+       <minSeverity>INFO</minSeverity>
+       <!-- PER_FILE_COMPACT, COMPACT or VERBOSE -->
+       <detailLevel>VERBOSE</detailLevel>
+       <!-- Will fail the build if total number of found violations is higher -->
+       <maxViolations>99999999</maxViolations>
+       <!-- Will print violations found in diff -->
+       <printViolations>true</printViolations>
+     
+     
+       <!-- Diff configuration, remove if you dont want to report violations 
+            for files changed between specific revisions. -->
+       <!-- Can be empty (ignored), Git-commit or any Git-reference -->
+       <diffFrom></diffFrom>
+       <!-- Same as above -->
+       <diffTo></diffTo>
+       <!-- INFO, WARN or ERROR -->
+       <diffMinSeverity>INFO</diffMinSeverity>
+       <!-- PER_FILE_COMPACT, COMPACT or VERBOSE -->
+       <diffDetailLevel>VERBOSE</diffDetailLevel>
+       <!-- Will fail the build if number of violations, in the diff within from/to, is higher -->
+       <diffMaxViolations>99</diffMaxViolations>
+       <!-- Will print violations found in diff -->
+       <diffPrintViolations>true</diffPrintViolations>
+       <!-- Where to look for Git -->
+       <gitRepo>.</gitRepo>
+     
+     
+       <!-- This is mandatory regardless of if you want to report violations 
+            between revisions or the entire repo. -->
+       <violations>
+        <violation>
+         <!-- Many more formats available, see:
+              https://github.com/tomasbjerre/violations-lib
+         -->
+         <parser>FINDBUGS</parser>
+         <reporter>Findbugs</reporter>
+         <folder>.</folder>
+         <pattern>.*/findbugsXml\.xml$</pattern>
+        </violation>
+       </violations>
+      </configuration>
      </execution>
     </executions>
    </plugin>

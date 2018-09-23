@@ -4,6 +4,11 @@ Changelog of Violations Maven plugin.
 ## Unreleased
 ### No issue
 
+**Automating reporters in readme**
+
+
+[9e7b6689276994a](https://github.com/tomasbjerre/violations-maven-plugin/commit/9e7b6689276994a) Tomas Bjerre *2018-09-23 12:44:13*
+
 **Doc**
 
 

@@ -48,6 +48,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
+        <changelog>1.55</changelog>
+        <violations>1.15</violations>
     </properties>
 
     <dependencies>
@@ -70,7 +72,7 @@
         <dependency>
             <groupId>se.bjurr.violations</groupId>
             <artifactId>violations-git-lib</artifactId>
-            <version>1.15</version>
+            <version>${violations}</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -118,7 +120,7 @@
             <plugin>
                 <groupId>se.bjurr.gitchangelog</groupId>
                 <artifactId>git-changelog-maven-plugin</artifactId>
-                <version>1.52</version>
+                <version>${changelog}</version>
                 <executions>
                     <execution>
                         <id>GenerateGitChangelog</id>
