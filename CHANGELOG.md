@@ -1,6 +1,20 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
+## Unreleased
+### No issue
+
+**Doc**
+
+
+[125576bd214a6d6](https://github.com/tomasbjerre/violations-maven-plugin/commit/125576bd214a6d6) Tomas Bjerre *2018-09-22 18:26:09*
+
+**Documenting parsers as a table**
+
+
+[c49bfeddee59814](https://github.com/tomasbjerre/violations-maven-plugin/commit/c49bfeddee59814) Tomas Bjerre *2018-09-22 08:41:21*
+
+
 ## violations-maven-plugin-1.13
 ### No issue
 

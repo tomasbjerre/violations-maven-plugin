@@ -1,7 +1,6 @@
 package se.bjurr.violations.maven.plugin;
 
 import org.apache.maven.plugins.annotations.Parameter;
-
 import se.bjurr.violations.lib.reports.Parser;
 
 public class ViolationConfig {
