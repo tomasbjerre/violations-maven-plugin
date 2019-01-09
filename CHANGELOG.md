@@ -1,8 +1,18 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
-## Unreleased
+## violations-maven-plugin-1.14
 ### No issue
+
+**Making CodeNarc respect source directory**
+
+
+[777f0de32fbd0e5](https://github.com/tomasbjerre/violations-maven-plugin/commit/777f0de32fbd0e5) Tomas Bjerre *2019-01-09 18:53:18*
+
+**Automatically stepping dependencies**
+
+
+[9f2be1e30a29f52](https://github.com/tomasbjerre/violations-maven-plugin/commit/9f2be1e30a29f52) Tomas Bjerre *2018-09-23 19:21:23*
 
 **Automating reporters in readme**
 
