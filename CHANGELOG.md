@@ -1,6 +1,15 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
+## violations-maven-plugin-1.15
+### No issue
+
+**Avoiding faulty slash with CodeNarc**
+
+
+[d7da30295296a94](https://github.com/tomasbjerre/violations-maven-plugin/commit/d7da30295296a94) Tomas Bjerre *2019-01-14 17:18:52*
+
+
 ## violations-maven-plugin-1.14
 ### No issue
 
