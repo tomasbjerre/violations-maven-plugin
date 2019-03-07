@@ -1,6 +1,15 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
+## violations-maven-plugin-1.16
+### No issue
+
+**golangci-lint**
+
+
+[71d4a322aaebd74](https://github.com/tomasbjerre/violations-maven-plugin/commit/71d4a322aaebd74) Tomas Bjerre *2019-03-07 15:32:06*
+
+
 ## violations-maven-plugin-1.15
 ### No issue
 
