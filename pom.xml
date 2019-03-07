@@ -48,7 +48,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
         <changelog>1.59</changelog>
-        <violations>1.17</violations>
+        <violations>1.18</violations>
     </properties>
 
     <dependencies>
