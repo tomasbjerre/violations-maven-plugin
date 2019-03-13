@@ -1,6 +1,15 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
+## violations-maven-plugin-1.17
+### No issue
+
+**Klocwork line numbers**
+
+
+[db58fc3d7e76149](https://github.com/tomasbjerre/violations-maven-plugin/commit/db58fc3d7e76149) Tomas Bjerre *2019-03-13 19:06:44*
+
+
 ## violations-maven-plugin-1.16
 ### No issue
 
