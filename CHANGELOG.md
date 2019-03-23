@@ -1,6 +1,15 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
+## violations-maven-plugin-1.18
+### No issue
+
+**Sonar Report**
+
+
+[aa5d8599981cfc3](https://github.com/tomasbjerre/violations-maven-plugin/commit/aa5d8599981cfc3) Tomas Bjerre *2019-03-23 14:57:13*
+
+
 ## violations-maven-plugin-1.17
 ### No issue
 
