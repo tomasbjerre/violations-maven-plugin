@@ -1,6 +1,15 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
+## violations-maven-plugin-1.19
+### No issue
+
+**Correcting Sonar severity**
+
+
+[a0b2a88f789fb65](https://github.com/tomasbjerre/violations-maven-plugin/commit/a0b2a88f789fb65) Tomas Bjerre *2019-03-30 19:55:13*
+
+
 ## violations-maven-plugin-1.18
 ### No issue
 
