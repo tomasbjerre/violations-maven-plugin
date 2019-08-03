@@ -86,7 +86,7 @@
 									<pattern>.*/checkstyle/.*\.xml$</pattern>
 								</violation>
 								<violation>
-									<parser>JSHINT</parser>
+									<parser>JSLINT</parser>
 									<reporter>JSHint</reporter>
 									<folder>.</folder>
 									<pattern>.*/jshint/.*\.xml$</pattern>

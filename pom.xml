@@ -47,8 +47,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
-        <changelog>1.59</changelog>
-        <violations>1.21</violations>
+        <changelog>1.60</changelog>
+        <violations>1.22</violations>
+        <violations-lib>1.96</violations-lib>
     </properties>
 
     <dependencies>
@@ -72,6 +73,11 @@
             <groupId>se.bjurr.violations</groupId>
             <artifactId>violations-git-lib</artifactId>
             <version>${violations}</version>
+        </dependency>
+        <dependency>
+            <groupId>se.bjurr.violations</groupId>
+            <artifactId>violations-lib</artifactId>
+            <version>${violations-lib}</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
