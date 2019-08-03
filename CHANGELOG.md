@@ -1,8 +1,13 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
-## Unreleased
+## violations-maven-plugin-1.20
 ### No issue
+
+**Changing name of JSHINT parser to JSLINT**
+
+
+[5b22b4bebfa5e05](https://github.com/tomasbjerre/violations-maven-plugin/commit/5b22b4bebfa5e05) Tomas Bjerre *2019-08-03 12:18:48*
 
 **doc**
 
