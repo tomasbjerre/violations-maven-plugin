@@ -1,6 +1,15 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
+## violations-maven-plugin-1.21
+### No issue
+
+**CodeClimate export**
+
+
+[2586dc5416db8f4](https://github.com/tomasbjerre/violations-maven-plugin/commit/2586dc5416db8f4) Tomas Bjerre *2019-09-07 15:02:34*
+
+
 ## violations-maven-plugin-1.20
 ### No issue
 
