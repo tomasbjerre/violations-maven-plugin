@@ -10,7 +10,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.target>1.6</maven.compiler.target>
 		<maven.compiler.source>1.6</maven.compiler.source>
-                <violations.version>1.21-SNAPSHOT</violations.version>
+		<violations.version>1.21-SNAPSHOT</violations.version>
 	</properties>
 	<build>
 		<plugins>
@@ -32,6 +32,10 @@
 							<maxSeverityColumnWidth>0</maxSeverityColumnWidth>
 							<maxLineColumnWidth>0</maxLineColumnWidth>
 							<maxMessageColumnWidth>50</maxMessageColumnWidth>
+							<!-- Will create a CodeClimate JSON report. -->
+							<codeClimateFile>code-climate-file.json</codeClimateFile>
+							<!-- Will create a normalized JSON report. -->
+							<violationsFile>violations-file.json</violationsFile>
 
 							<!-- Global configuration, remove if you dont want to report violations 
 								for the entire repo. -->

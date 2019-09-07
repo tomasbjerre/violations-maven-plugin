@@ -1,10 +1,16 @@
 package se.bjurr.violations.maven.plugin;
 
+import static java.nio.file.StandardOpenOption.CREATE;
+import static java.nio.file.StandardOpenOption.TRUNCATE_EXISTING;
+import static java.nio.file.StandardOpenOption.WRITE;
 import static org.apache.maven.plugins.annotations.LifecyclePhase.VERIFY;
 import static se.bjurr.violations.git.ViolationsReporterApi.violationsReporterApi;
 import static se.bjurr.violations.lib.ViolationsApi.violationsApi;
 
 import java.io.File;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 import javax.script.ScriptException;
@@ -16,7 +22,9 @@ import se.bjurr.violations.git.ViolationsGit;
 import se.bjurr.violations.git.ViolationsReporterDetailLevel;
 import se.bjurr.violations.lib.model.SEVERITY;
 import se.bjurr.violations.lib.model.Violation;
+import se.bjurr.violations.lib.model.codeclimate.CodeClimateTransformer;
 import se.bjurr.violations.lib.util.Filtering;
+import se.bjurr.violations.violationslib.com.google.gson.GsonBuilder;
 
 @Mojo(name = "violations", defaultPhase = VERIFY)
 public class ViolationCommentsMojo extends AbstractMojo {
@@ -72,6 +80,12 @@ public class ViolationCommentsMojo extends AbstractMojo {
   @Parameter(property = "maxSeverityColumnWidth", required = false, defaultValue = "0")
   private int maxSeverityColumnWidth;
 
+  @Parameter(property = "codeClimateFile", required = false)
+  private File codeClimateFile;
+
+  @Parameter(property = "violationsFile", required = false)
+  private File violationsFile;
+
   @Override
   public void execute() throws MojoExecutionException {
     try {
@@ -98,8 +112,25 @@ public class ViolationCommentsMojo extends AbstractMojo {
       allParsedViolationsInDiff.addAll(getAllViolationsInDiff(parsedViolations));
     }
 
+    if (this.codeClimateFile != null) {
+      createJsonFile(
+          CodeClimateTransformer.fromViolations(allParsedViolations), this.codeClimateFile);
+    }
+    if (this.violationsFile != null) {
+      createJsonFile(allParsedViolations, this.violationsFile);
+    }
     checkGlobalViolations(allParsedViolations);
     checkDiffViolations(allParsedViolationsInDiff);
+  }
+
+  private void createJsonFile(final Object object, final File file) throws IOException {
+    final String codeClimateReport = new GsonBuilder().setPrettyPrinting().create().toJson(object);
+    Files.write(
+        file.toPath(),
+        codeClimateReport.getBytes(StandardCharsets.UTF_8),
+        TRUNCATE_EXISTING,
+        CREATE,
+        WRITE);
   }
 
   private void checkGlobalViolations(final List<Violation> violations) throws ScriptException {
