@@ -1,6 +1,20 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
+## Unreleased
+### No issue
+
+**Using ASCII chars in tables**
+
+
+[b21a38f890d239e](https://github.com/tomasbjerre/violations-maven-plugin/commit/b21a38f890d239e) Tomas Bjerre *2019-10-03 18:10:18*
+
+**Create FUNDING.yml**
+
+
+[3eb258914c396b3](https://github.com/tomasbjerre/violations-maven-plugin/commit/3eb258914c396b3) Tomas Bjerre *2019-09-28 06:59:04*
+
+
 ## violations-maven-plugin-1.21
 ### No issue
 
