@@ -1,6 +1,15 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
+## violations-maven-plugin-1.23
+### No issue
+
+**Always front slashes when searching FS**
+
+
+[58c465065bb1de3](https://github.com/tomasbjerre/violations-maven-plugin/commit/58c465065bb1de3) Tomas Bjerre *2019-10-04 14:55:33*
+
+
 ## violations-maven-plugin-1.22
 ### No issue
 
