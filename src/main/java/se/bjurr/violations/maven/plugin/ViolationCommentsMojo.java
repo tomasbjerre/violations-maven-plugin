@@ -13,11 +13,14 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.script.ScriptException;
+
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
+
 import se.bjurr.violations.git.ViolationsGit;
 import se.bjurr.violations.git.ViolationsReporterDetailLevel;
 import se.bjurr.violations.lib.model.SEVERITY;
@@ -44,7 +47,7 @@ public class ViolationCommentsMojo extends AbstractMojo {
   @Parameter(property = "maxViolations", required = false, defaultValue = "999999")
   private Integer maxViolations;
 
-  @Parameter(property = "diffPrintViolations", required = false, defaultValue = "true")
+  @Parameter(property = "diffPrintViolations", required = false, defaultValue = "false")
   private boolean diffPrintViolations;
 
   @Parameter(property = "diffFrom", required = false)
