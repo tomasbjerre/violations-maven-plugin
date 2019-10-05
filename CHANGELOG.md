@@ -1,6 +1,15 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
+## violations-maven-plugin-1.24
+### No issue
+
+**More logging**
+
+
+[7503664c1a1f2b8](https://github.com/tomasbjerre/violations-maven-plugin/commit/7503664c1a1f2b8) Tomas Bjerre *2019-10-05 06:28:33*
+
+
 ## violations-maven-plugin-1.23
 ### No issue
 
