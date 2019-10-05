@@ -1,6 +1,15 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
+## violations-maven-plugin-1.25
+### No issue
+
+**By default dont print violations in diff**
+
+
+[287f4089a772cd4](https://github.com/tomasbjerre/violations-maven-plugin/commit/287f4089a772cd4) Tomas Bjerre *2019-10-05 08:34:32*
+
+
 ## violations-maven-plugin-1.24
 ### No issue
 
