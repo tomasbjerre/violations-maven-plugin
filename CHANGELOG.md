@@ -1,6 +1,16 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
+## violations-maven-plugin-1.26
+### No issue
+
+**Less logging on info level**
+
+ * &quot;No references specified&quot; 
+
+[8f0b25e241105e6](https://github.com/tomasbjerre/violations-maven-plugin/commit/8f0b25e241105e6) Tomas Bjerre *2019-10-06 16:12:07*
+
+
 ## violations-maven-plugin-1.25
 ### No issue
 
