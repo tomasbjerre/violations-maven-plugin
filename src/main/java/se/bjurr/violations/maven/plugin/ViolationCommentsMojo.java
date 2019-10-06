@@ -109,7 +109,11 @@ public class ViolationCommentsMojo extends AbstractMojo {
 
       allParsedViolations.addAll(getFiltered(parsedViolations, minSeverity));
 
-      allParsedViolationsInDiff.addAll(getAllViolationsInDiff(parsedViolations));
+      if (shouldCheckDiff()) {
+        allParsedViolationsInDiff.addAll(getAllViolationsInDiff(parsedViolations));
+      } else {
+        getLog().debug("No references specified, will not report violations in diff");
+      }
     }
 
     if (this.codeClimateFile != null) {
@@ -120,7 +124,9 @@ public class ViolationCommentsMojo extends AbstractMojo {
       createJsonFile(allParsedViolations, this.violationsFile);
     }
     checkGlobalViolations(allParsedViolations);
-    checkDiffViolations(allParsedViolationsInDiff);
+    if (shouldCheckDiff()) {
+      checkDiffViolations(allParsedViolationsInDiff);
+    }
   }
 
   private void createJsonFile(final Object object, final File file) throws IOException {
@@ -197,14 +203,13 @@ public class ViolationCommentsMojo extends AbstractMojo {
 
   private List<Violation> getAllViolationsInDiff(final List<Violation> unfilteredViolations)
       throws Exception {
-    if (!isDefined(diffFrom) || !isDefined(diffTo)) {
-      getLog().info("No references specified, will not report violations in diff");
-      return new ArrayList<>();
-    } else {
-      final List<Violation> candidates = getFiltered(unfilteredViolations, diffMinSeverity);
-      return new ViolationsGit(candidates) //
-          .getViolationsInChangeset(gitRepo, diffFrom, diffTo);
-    }
+    final List<Violation> candidates = getFiltered(unfilteredViolations, diffMinSeverity);
+    return new ViolationsGit(candidates) //
+        .getViolationsInChangeset(gitRepo, diffFrom, diffTo);
+  }
+
+  private boolean shouldCheckDiff() {
+    return isDefined(diffFrom) && isDefined(diffTo);
   }
 
   private List<Violation> getFiltered(final List<Violation> unfiltered, final SEVERITY filter) {
