@@ -1,6 +1,15 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
+## violations-maven-plugin-1.27
+### No issue
+
+**Using column widths as min 0 and max given**
+
+
+[b02e99b14d22a2a](https://github.com/tomasbjerre/violations-maven-plugin/commit/b02e99b14d22a2a) Tomas Bjerre *2019-10-08 17:56:38*
+
+
 ## violations-maven-plugin-1.26
 ### No issue
 

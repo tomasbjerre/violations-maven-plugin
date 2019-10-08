@@ -167,7 +167,7 @@ The plugin needs to run after any static code analysis tools, so put it after th
        <!-- Optional config -->
        <!-- 0 is disabled -->
        <maxReporterColumnWidth>0</maxReporterColumnWidth>
-       <maxRuleColumnWidth>10</maxRuleColumnWidth>
+       <maxRuleColumnWidth>60</maxRuleColumnWidth>
        <maxSeverityColumnWidth>0</maxSeverityColumnWidth>
        <maxLineColumnWidth>0</maxLineColumnWidth>
        <maxMessageColumnWidth>50</maxMessageColumnWidth>
