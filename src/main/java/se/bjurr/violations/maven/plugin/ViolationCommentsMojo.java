@@ -68,13 +68,13 @@ public class ViolationCommentsMojo extends AbstractMojo {
   @Parameter(property = "maxLineColumnWidth", required = false, defaultValue = "0")
   private int maxLineColumnWidth;
 
-  @Parameter(property = "maxMessageColumnWidth", required = false, defaultValue = "50")
+  @Parameter(property = "maxMessageColumnWidth", required = false, defaultValue = "30")
   private int maxMessageColumnWidth;
 
   @Parameter(property = "maxReporterColumnWidth", required = false, defaultValue = "0")
   private int maxReporterColumnWidth;
 
-  @Parameter(property = "maxRuleColumnWidth", required = false, defaultValue = "10")
+  @Parameter(property = "maxRuleColumnWidth", required = false, defaultValue = "0")
   private int maxRuleColumnWidth;
 
   @Parameter(property = "maxSeverityColumnWidth", required = false, defaultValue = "0")
