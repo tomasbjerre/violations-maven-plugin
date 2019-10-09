@@ -10,7 +10,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.target>1.6</maven.compiler.target>
 		<maven.compiler.source>1.6</maven.compiler.source>
-		<violations.version>1.28-SNAPSHOT</violations.version>
+		<violations.version>1.29-SNAPSHOT</violations.version>
 	</properties>
 	<build>
 		<plugins>
@@ -28,10 +28,10 @@
 							<!-- Optional config -->
 							<!-- 0 is disabled -->
 							<maxReporterColumnWidth>0</maxReporterColumnWidth>
-							<maxRuleColumnWidth>10</maxRuleColumnWidth>
+							<maxRuleColumnWidth>0</maxRuleColumnWidth>
 							<maxSeverityColumnWidth>0</maxSeverityColumnWidth>
 							<maxLineColumnWidth>0</maxLineColumnWidth>
-							<maxMessageColumnWidth>50</maxMessageColumnWidth>
+							<maxMessageColumnWidth>30</maxMessageColumnWidth>
 							<!-- Will create a CodeClimate JSON report. -->
 							<codeClimateFile>code-climate-file.json</codeClimateFile>
 							<!-- Will create a normalized JSON report. -->

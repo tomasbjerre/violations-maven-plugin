@@ -1,6 +1,15 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
+## violations-maven-plugin-1.28
+### No issue
+
+**maxMessageColumnWidth = 30**
+
+
+[0d3cdf9fc5d7f0a](https://github.com/tomasbjerre/violations-maven-plugin/commit/0d3cdf9fc5d7f0a) Tomas Bjerre *2019-10-09 16:31:21*
+
+
 ## violations-maven-plugin-1.27
 ### No issue
 
