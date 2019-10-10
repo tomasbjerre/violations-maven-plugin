@@ -1,6 +1,15 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
+## violations-maven-plugin-1.29
+### No issue
+
+**Corrections in Pydocstyle**
+
+
+[a55d3ee248f24fe](https://github.com/tomasbjerre/violations-maven-plugin/commit/a55d3ee248f24fe) Tomas Bjerre *2019-10-10 16:00:58*
+
+
 ## violations-maven-plugin-1.28
 ### No issue
 
