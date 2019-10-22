@@ -1,6 +1,15 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
+## violations-maven-plugin-1.30
+### GitHub #79   
+
+**Protolint tomasbjerre/violations-lib#79**
+
+
+[bb06cf327315c5b](https://github.com/tomasbjerre/violations-maven-plugin/commit/bb06cf327315c5b) Tomas Bjerre *2019-10-22 03:41:07*
+
+
 ## violations-maven-plugin-1.29
 ### No issue
 

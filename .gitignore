@@ -12,3 +12,5 @@ temp
 couscous.phar
 violations-maven-plugin-example/code-climate-file.json
 violations-maven-plugin-example/violations-file.json
+.okhttpcache
+
