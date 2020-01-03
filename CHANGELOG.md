@@ -1,6 +1,15 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
+## violations-maven-plugin-1.31
+### GitHub #80   
+
+**Add support for sonar issue report formats >= v7.5 tomasbjerre/violations-lib#80**
+
+
+[28c8760179eba96](https://github.com/tomasbjerre/violations-maven-plugin/commit/28c8760179eba96) Tomas Bjerre *2020-01-03 07:02:38*
+
+
 ## violations-maven-plugin-1.30
 ### GitHub #79   
 
