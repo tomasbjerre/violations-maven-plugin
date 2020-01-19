@@ -32,6 +32,10 @@ public class ViolationCommentsMojo extends AbstractMojo {
   @Parameter(property = "printViolations", required = false, defaultValue = "true")
   private boolean printViolations;
 
+  public void setPrintViolations(boolean printViolations) {
+    this.printViolations = printViolations;
+  }
+
   @Parameter(property = "violations", required = true)
   private List<ViolationConfig> violations;
 
@@ -40,6 +44,10 @@ public class ViolationCommentsMojo extends AbstractMojo {
 
   @Parameter(property = "detailLevel", required = false, defaultValue = "VERBOSE")
   private ViolationsReporterDetailLevel detailLevel;
+
+  public void setDetailLevel(ViolationsReporterDetailLevel detailLevel) {
+    this.detailLevel = detailLevel;
+  }
 
   @Parameter(property = "maxViolations", required = false, defaultValue = "999999")
   private Integer maxViolations;
@@ -85,6 +93,14 @@ public class ViolationCommentsMojo extends AbstractMojo {
 
   @Parameter(property = "violationsFile", required = false)
   private File violationsFile;
+
+  public void setMaxViolations(Integer maxViolations) {
+    this.maxViolations = maxViolations;
+  }
+
+  public void setViolations(List<ViolationConfig> violations) {
+    this.violations = violations;
+  }
 
   @Override
   public void execute() throws MojoExecutionException {
