@@ -16,19 +16,19 @@ public class ViolationConfig {
   @Parameter(property = "pattern", required = false)
   private String pattern;
 
-  public void setFolder(String folder) {
+  public void setFolder(final String folder) {
     this.folder = folder;
   }
 
-  public void setPattern(String pattern) {
+  public void setPattern(final String pattern) {
     this.pattern = pattern;
   }
 
-  public void setReporter(String reporter) {
+  public void setReporter(final String reporter) {
     this.reporter = reporter;
   }
 
-  public void setParser(Parser parser) {
+  public void setParser(final Parser parser) {
     this.parser = parser;
   }
 
@@ -46,5 +46,18 @@ public class ViolationConfig {
 
   public String getReporter() {
     return reporter;
+  }
+
+  @Override
+  public String toString() {
+    return "ViolationConfig [reporter="
+        + reporter
+        + ", parser="
+        + parser
+        + ", folder="
+        + folder
+        + ", pattern="
+        + pattern
+        + "]";
   }
 }
