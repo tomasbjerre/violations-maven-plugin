@@ -1,6 +1,15 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
+## violations-maven-plugin-1.33
+### No issue
+
+**Adding tostring to enable debugging**
+
+
+[75f7924515586ba](https://github.com/tomasbjerre/violations-maven-plugin/commit/75f7924515586ba) Tomas Bjerre *2020-01-19 09:28:03*
+
+
 ## violations-maven-plugin-1.31
 ### GitHub #80   
 
