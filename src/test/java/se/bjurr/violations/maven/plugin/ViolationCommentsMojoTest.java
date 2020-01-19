@@ -18,19 +18,15 @@ public class ViolationCommentsMojoTest {
 
   public String getTestResources() throws Exception {
     URI uri = ViolationCommentsMojoTest.class.getResource("/spotbugsXml.xml").toURI();
-    return new File(uri).getAbsolutePath();
+    return new File(uri).getParentFile().getAbsolutePath();
   }
 
   @Test
   public void testThatItIsCountingCorrectly() throws Exception {
     ViolationCommentsMojo sut = new ViolationCommentsMojo();
     sut.setMaxViolations(99999);
-    ViolationConfig violationConfig = new ViolationConfig();
-    violationConfig.setFolder(getTestResources());
-    violationConfig.setParser(Parser.FINDBUGS);
-    violationConfig.setPattern(".*/spotbugsXml\\.xml");
-    violationConfig.setReporter("Spotbugs");
-    sut.setViolations(Arrays.asList(violationConfig));
+
+    setupViolationPatterns(sut);
 
     sut.setPrintViolations(true);
     RecordingLog recordingLog = new RecordingLog();
@@ -43,38 +39,62 @@ public class ViolationCommentsMojoTest {
     assertThat(recordingLog.getInfo())
         .contains(
             "Summary\n"
-                + "|          |      |      |       |       |\n"
-                + "| Reporter | INFO | WARN | ERROR | Total |\n"
-                + "|          |      |      |       |       |\n"
-                + "+----------+------+------+-------+-------+\n"
-                + "|          |      |      |       |       |\n"
-                + "| Spotbugs | 7    | 1    | 0     | 8     |\n"
-                + "|          |      |      |       |       |\n"
-                + "+----------+------+------+-------+-------+\n"
-                + "|          |      |      |       |       |\n"
-                + "|          | 7    | 1    | 0     | 8     |\n"
-                + "|          |      |      |       |       |\n"
-                + "+----------+------+------+-------+-------+\n"
-                + "");
+                + "|            |      |      |       |       |\n"
+                + "| Reporter   | INFO | WARN | ERROR | Total |\n"
+                + "|            |      |      |       |       |\n"
+                + "+------------+------+------+-------+-------+\n"
+                + "|            |      |      |       |       |\n"
+                + "| Checkstyle | 0    | 3    | 0     | 3     |\n"
+                + "|            |      |      |       |       |\n"
+                + "+------------+------+------+-------+-------+\n"
+                + "|            |      |      |       |       |\n"
+                + "| PMD        | 0    | 1    | 0     | 1     |\n"
+                + "|            |      |      |       |       |\n"
+                + "+------------+------+------+-------+-------+\n"
+                + "|            |      |      |       |       |\n"
+                + "| Spotbugs   | 1    | 0    | 0     | 1     |\n"
+                + "|            |      |      |       |       |\n"
+                + "+------------+------+------+-------+-------+\n"
+                + "|            |      |      |       |       |\n"
+                + "|            | 1    | 4    | 0     | 5     |\n"
+                + "|            |      |      |       |       |\n"
+                + "+------------+------+------+-------+-------+");
   }
 
   @Test
   public void testThatItFails() throws Exception {
     expectedEx.expect(MojoExecutionException.class);
-    expectedEx.expectMessage("Too many violations found, max is 0 but found 8");
+    expectedEx.expectMessage("Too many violations found, max is 0 but found 5");
 
     ViolationCommentsMojo sut = new ViolationCommentsMojo();
     sut.setMaxViolations(0);
-    ViolationConfig violationConfig = new ViolationConfig();
-    violationConfig.setFolder(getTestResources());
-    violationConfig.setParser(Parser.FINDBUGS);
-    violationConfig.setPattern(".*/spotbugsXml\\.xml");
-    violationConfig.setReporter("Spotbugs");
-    sut.setViolations(Arrays.asList(violationConfig));
+    setupViolationPatterns(sut);
 
     RecordingLog recordingLog = new RecordingLog();
     sut.setLog(recordingLog);
 
     sut.execute();
+  }
+
+  private void setupViolationPatterns(ViolationCommentsMojo sut) throws Exception {
+    ViolationConfig vc1 = new ViolationConfig();
+    vc1.setFolder(getTestResources());
+    vc1.setParser(Parser.CHECKSTYLE);
+    vc1.setPattern(".*/checkstyle-result\\.xml");
+    vc1.setReporter("Checkstyle");
+
+    ViolationConfig vc2 = new ViolationConfig();
+    vc2.setFolder(getTestResources());
+    vc2.setParser(Parser.PMD);
+    vc2.setPattern(".*/pmd\\.xml");
+    vc2.setReporter("PMD");
+
+    ViolationConfig vc3 = new ViolationConfig();
+    vc3.setFolder(getTestResources());
+    vc3.setParser(Parser.FINDBUGS);
+    vc3.setPattern(".*/spotbugsXml\\.xml");
+    vc3.setReporter("Spotbugs");
+
+    sut.setViolations(Arrays.asList(vc1, vc2, vc3));
   }
 }

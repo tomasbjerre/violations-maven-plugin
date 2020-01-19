@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd"
+    version="6.13.0" timestamp="2020-01-19T14:55:22.398">
+<file name="/home/bjerre/workspace/openapi-generator-repo/modules/openapi-generator-online/src/main/java/org/openapitools/codegen/online/api/GenApi.java">
+<violation beginline="45" endline="45" begincolumn="164" endcolumn="169" rule="AvoidDuplicateLiterals" ruleset="Error Prone" package="org.openapitools.codegen.online.api" class="GenApi" externalInfoUrl="https://pmd.github.io/pmd-6.13.0/pmd_rules_java_errorprone.html#avoidduplicateliterals" priority="3">
+The String literal &quot;List&quot; appears 4 times in this file; the first occurrence is on line 45
+</violation>
+</file>
+</pmd>
