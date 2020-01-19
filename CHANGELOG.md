@@ -1,8 +1,13 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
-## Unreleased
+## violations-maven-plugin-1.34
 ### No issue
+
+**Filtering out duplicated violations**
+
+
+[ef8a3ed7a4bfac1](https://github.com/tomasbjerre/violations-maven-plugin/commit/ef8a3ed7a4bfac1) Tomas Bjerre *2020-01-19 15:59:46*
 
 **Test**
 
