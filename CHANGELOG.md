@@ -1,6 +1,15 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
+## violations-maven-plugin-1.35
+### GitHub #82   
+
+**CPPCheckParser with auto closed <error/> tags tomasbjerre/violations-lib#82**
+
+
+[ebada783958d640](https://github.com/tomasbjerre/violations-maven-plugin/commit/ebada783958d640) Tomas Bjerre *2020-02-03 16:59:18*
+
+
 ## violations-maven-plugin-1.34
 ### No issue
 
