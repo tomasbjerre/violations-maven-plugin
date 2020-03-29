@@ -1,6 +1,15 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
+## violations-maven-plugin-1.36
+### GitHub [#1](https://github.com/tomasbjerre/violations-maven-plugin/issues/1) False positives in GitLab using the Code Climate output  
+
+**Not including lines in codeclimate fingerprint tomasbjerre/violations-maven-plugin#1**
+
+
+[5e00063d1173141](https://github.com/tomasbjerre/violations-maven-plugin/commit/5e00063d1173141) Tomas Bjerre *2020-03-29 14:15:47*
+
+
 ## violations-maven-plugin-1.35
 ### GitHub #82   
 
