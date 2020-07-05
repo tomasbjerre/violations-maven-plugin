@@ -1,6 +1,15 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
+## violations-maven-plugin-1.37
+### No issue
+
+**New: custom logging in violations-lib**
+
+
+[b061eeb58fe4e39](https://github.com/tomasbjerre/violations-maven-plugin/commit/b061eeb58fe4e39) Tomas Bjerre *2020-07-05 15:10:36*
+
+
 ## violations-maven-plugin-1.36
 ### GitHub [#1](https://github.com/tomasbjerre/violations-maven-plugin/issues/1) False positives in GitLab using the Code Climate output  
 
