@@ -11,8 +11,10 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
+import java.util.logging.Level;
 import javax.script.ScriptException;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
@@ -20,6 +22,7 @@ import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 import se.bjurr.violations.git.ViolationsGit;
 import se.bjurr.violations.git.ViolationsReporterDetailLevel;
+import se.bjurr.violations.lib.ViolationsLogger;
 import se.bjurr.violations.lib.model.SEVERITY;
 import se.bjurr.violations.lib.model.Violation;
 import se.bjurr.violations.lib.model.codeclimate.CodeClimateTransformer;
@@ -32,7 +35,7 @@ public class ViolationCommentsMojo extends AbstractMojo {
   @Parameter(property = "printViolations", required = false, defaultValue = "true")
   private boolean printViolations;
 
-  public void setPrintViolations(boolean printViolations) {
+  public void setPrintViolations(final boolean printViolations) {
     this.printViolations = printViolations;
   }
 
@@ -45,7 +48,7 @@ public class ViolationCommentsMojo extends AbstractMojo {
   @Parameter(property = "detailLevel", required = false, defaultValue = "VERBOSE")
   private ViolationsReporterDetailLevel detailLevel;
 
-  public void setDetailLevel(ViolationsReporterDetailLevel detailLevel) {
+  public void setDetailLevel(final ViolationsReporterDetailLevel detailLevel) {
     this.detailLevel = detailLevel;
   }
 
@@ -94,54 +97,86 @@ public class ViolationCommentsMojo extends AbstractMojo {
   @Parameter(property = "violationsFile", required = false)
   private File violationsFile;
 
-  public void setMaxViolations(Integer maxViolations) {
+  private ViolationsLogger violationsLogger;
+
+  public void setMaxViolations(final Integer maxViolations) {
     this.maxViolations = maxViolations;
   }
 
-  public void setViolations(List<ViolationConfig> violations) {
+  public void setViolations(final List<ViolationConfig> violations) {
     this.violations = violations;
   }
 
   @Override
   public void execute() throws MojoExecutionException {
     try {
-      doExecute();
+      this.doExecute();
     } catch (final Exception e) {
       throw new MojoExecutionException(e.getMessage(), e);
     }
   }
 
   private void doExecute() throws Exception, ScriptException {
-    final List<Violation> allParsedViolations = new ArrayList<>();
-    final List<Violation> allParsedViolationsInDiff = new ArrayList<>();
-    for (final ViolationConfig configuredViolation : violations) {
-      final List<Violation> parsedViolations =
+    this.violationsLogger =
+        new ViolationsLogger() {
+          @Override
+          public void log(final Level level, final String string) {
+            if (level == Level.FINE) {
+              ViolationCommentsMojo.this.getLog().debug(string);
+            } else if (level == Level.SEVERE) {
+              ViolationCommentsMojo.this.getLog().error(string);
+            } else if (level == Level.WARNING) {
+              ViolationCommentsMojo.this.getLog().warn(string);
+            } else {
+              ViolationCommentsMojo.this.getLog().info(string);
+            }
+          }
+
+          @Override
+          public void log(final Level level, final String string, final Throwable t) {
+            if (level == Level.FINE) {
+              ViolationCommentsMojo.this.getLog().debug(string, t);
+            } else if (level == Level.SEVERE) {
+              ViolationCommentsMojo.this.getLog().error(string, t);
+            } else if (level == Level.WARNING) {
+              ViolationCommentsMojo.this.getLog().warn(string, t);
+            } else {
+              ViolationCommentsMojo.this.getLog().info(string);
+            }
+          }
+        };
+
+    final Set<Violation> allParsedViolations = new TreeSet<>();
+    final Set<Violation> allParsedViolationsInDiff = new TreeSet<>();
+    for (final ViolationConfig configuredViolation : this.violations) {
+      final Set<Violation> parsedViolations =
           violationsApi() //
+              .withViolationsLogger(this.violationsLogger) //
               .findAll(configuredViolation.getParser()) //
               .inFolder(configuredViolation.getFolder()) //
               .withPattern(configuredViolation.getPattern()) //
               .withReporter(configuredViolation.getReporter()) //
               .violations();
 
-      allParsedViolations.addAll(getFiltered(parsedViolations, minSeverity));
+      allParsedViolations.addAll(this.getFiltered(parsedViolations, this.minSeverity));
 
-      if (shouldCheckDiff()) {
-        allParsedViolationsInDiff.addAll(getAllViolationsInDiff(parsedViolations));
+      if (this.shouldCheckDiff()) {
+        allParsedViolationsInDiff.addAll(this.getAllViolationsInDiff(parsedViolations));
       } else {
-        getLog().debug("No references specified, will not report violations in diff");
+        this.getLog().debug("No references specified, will not report violations in diff");
       }
     }
 
     if (this.codeClimateFile != null) {
-      createJsonFile(
+      this.createJsonFile(
           CodeClimateTransformer.fromViolations(allParsedViolations), this.codeClimateFile);
     }
     if (this.violationsFile != null) {
-      createJsonFile(allParsedViolations, this.violationsFile);
+      this.createJsonFile(allParsedViolations, this.violationsFile);
     }
-    checkGlobalViolations(allParsedViolations);
-    if (shouldCheckDiff()) {
-      checkDiffViolations(allParsedViolationsInDiff);
+    this.checkGlobalViolations(allParsedViolations);
+    if (this.shouldCheckDiff()) {
+      this.checkDiffViolations(allParsedViolationsInDiff);
     }
   }
 
@@ -155,80 +190,80 @@ public class ViolationCommentsMojo extends AbstractMojo {
         WRITE);
   }
 
-  private void checkGlobalViolations(final List<Violation> violations) throws ScriptException {
-    final boolean tooManyViolations = violations.size() > maxViolations;
-    if (!tooManyViolations && !printViolations) {
+  private void checkGlobalViolations(final Set<Violation> violations) throws ScriptException {
+    final boolean tooManyViolations = violations.size() > this.maxViolations;
+    if (!tooManyViolations && !this.printViolations) {
       return;
     }
 
     final String report =
         violationsReporterApi() //
             .withViolations(violations) //
-            .withMaxLineColumnWidth(maxLineColumnWidth) //
-            .withMaxMessageColumnWidth(maxMessageColumnWidth) //
-            .withMaxReporterColumnWidth(maxReporterColumnWidth) //
-            .withMaxRuleColumnWidth(maxRuleColumnWidth) //
-            .withMaxSeverityColumnWidth(maxSeverityColumnWidth) //
-            .getReport(detailLevel);
+            .withMaxLineColumnWidth(this.maxLineColumnWidth) //
+            .withMaxMessageColumnWidth(this.maxMessageColumnWidth) //
+            .withMaxReporterColumnWidth(this.maxReporterColumnWidth) //
+            .withMaxRuleColumnWidth(this.maxRuleColumnWidth) //
+            .withMaxSeverityColumnWidth(this.maxSeverityColumnWidth) //
+            .getReport(this.detailLevel);
 
     if (tooManyViolations) {
+      this.getLog().error(report);
       throw new ScriptException(
           "Too many violations found, max is "
-              + maxViolations
+              + this.maxViolations
               + " but found "
               + violations.size()
-              + "\n"
-              + report);
+              + ". You can adjust this with the 'maxViolations' configuration parameter.");
     } else {
-      if (printViolations) {
-        getLog().info("\nViolations in repo\n\n" + report);
+      if (this.printViolations) {
+        this.getLog().info("\nViolations in repo\n\n" + report);
       }
     }
   }
 
-  private void checkDiffViolations(final List<Violation> violations) throws ScriptException {
-    final boolean tooManyViolations = violations.size() > diffMaxViolations;
-    if (!tooManyViolations && !diffPrintViolations) {
+  private void checkDiffViolations(final Set<Violation> violations) throws ScriptException {
+    final boolean tooManyViolations = violations.size() > this.diffMaxViolations;
+    if (!tooManyViolations && !this.diffPrintViolations) {
       return;
     }
 
     final String report =
         violationsReporterApi() //
             .withViolations(violations) //
-            .withMaxLineColumnWidth(maxLineColumnWidth) //
-            .withMaxMessageColumnWidth(maxMessageColumnWidth) //
-            .withMaxReporterColumnWidth(maxReporterColumnWidth) //
-            .withMaxRuleColumnWidth(maxRuleColumnWidth) //
-            .withMaxSeverityColumnWidth(maxSeverityColumnWidth) //
-            .getReport(diffDetailLevel);
+            .withMaxLineColumnWidth(this.maxLineColumnWidth) //
+            .withMaxMessageColumnWidth(this.maxMessageColumnWidth) //
+            .withMaxReporterColumnWidth(this.maxReporterColumnWidth) //
+            .withMaxRuleColumnWidth(this.maxRuleColumnWidth) //
+            .withMaxSeverityColumnWidth(this.maxSeverityColumnWidth) //
+            .getReport(this.diffDetailLevel);
 
     if (tooManyViolations) {
+      this.getLog().error(report);
       throw new ScriptException(
           "Too many violations found in diff, max is "
-              + diffMaxViolations
+              + this.diffMaxViolations
               + " but found "
               + violations.size()
-              + "\n"
-              + report);
+              + ". You can adjust this with the 'maxViolations' configuration parameter.");
     } else {
-      if (diffPrintViolations) {
-        getLog().info("\nViolations in diff\n\n" + report);
+      if (this.diffPrintViolations) {
+        this.getLog().info("\nViolations in diff\n\n" + report);
       }
     }
   }
 
-  private List<Violation> getAllViolationsInDiff(final List<Violation> unfilteredViolations)
+  private Set<Violation> getAllViolationsInDiff(final Set<Violation> unfilteredViolations)
       throws Exception {
-    final List<Violation> candidates = getFiltered(unfilteredViolations, diffMinSeverity);
+    final Set<Violation> candidates = this.getFiltered(unfilteredViolations, this.diffMinSeverity);
     return new ViolationsGit(candidates) //
-        .getViolationsInChangeset(gitRepo, diffFrom, diffTo);
+        .getViolationsInChangeset(this.gitRepo, this.diffFrom, this.diffTo);
   }
 
   private boolean shouldCheckDiff() {
-    return isDefined(diffFrom) && isDefined(diffTo);
+    return this.isDefined(this.diffFrom) && this.isDefined(this.diffTo);
   }
 
-  private List<Violation> getFiltered(final List<Violation> unfiltered, final SEVERITY filter) {
+  private Set<Violation> getFiltered(final Set<Violation> unfiltered, final SEVERITY filter) {
     if (filter != null) {
       return Filtering.withAtLEastSeverity(unfiltered, filter);
     }
