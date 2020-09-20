@@ -44,7 +44,7 @@ public class ViolationCommentsMojoTest {
                 + "|            |      |      |       |       |\n"
                 + "+------------+------+------+-------+-------+\n"
                 + "|            |      |      |       |       |\n"
-                + "| Checkstyle | 0    | 3    | 0     | 3     |\n"
+                + "| Checkstyle | 0    | 5    | 0     | 5     |\n"
                 + "|            |      |      |       |       |\n"
                 + "+------------+------+------+-------+-------+\n"
                 + "|            |      |      |       |       |\n"
@@ -56,7 +56,7 @@ public class ViolationCommentsMojoTest {
                 + "|            |      |      |       |       |\n"
                 + "+------------+------+------+-------+-------+\n"
                 + "|            |      |      |       |       |\n"
-                + "|            | 1    | 4    | 0     | 5     |\n"
+                + "|            | 1    | 6    | 0     | 7     |\n"
                 + "|            |      |      |       |       |\n"
                 + "+------------+------+------+-------+-------+");
   }
@@ -64,7 +64,7 @@ public class ViolationCommentsMojoTest {
   @Test
   public void testThatItFails() throws Exception {
     expectedEx.expect(MojoExecutionException.class);
-    expectedEx.expectMessage("Too many violations found, max is 0 but found 5");
+    expectedEx.expectMessage("Too many violations found, max is 0 but found 7");
 
     ViolationCommentsMojo sut = new ViolationCommentsMojo();
     sut.setMaxViolations(0);
