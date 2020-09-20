@@ -1,13 +1,13 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
-## Unreleased
+## violations-maven-plugin-1.38
 ### No issue
 
 **violations-lib 1.128**
 
 
-[f3081fd9d5b7da0](https://github.com/tomasbjerre/violations-maven-plugin/commit/f3081fd9d5b7da0) Tomas Bjerre *2020-09-20 13:06:55*
+[408b1668d252483](https://github.com/tomasbjerre/violations-maven-plugin/commit/408b1668d252483) Tomas Bjerre *2020-09-20 13:15:36*
 
 
 ## violations-maven-plugin-1.37
