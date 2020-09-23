@@ -1,6 +1,15 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
+## violations-maven-plugin-1.39
+### No issue
+
+**Allow Checkstyle reports with no line**
+
+
+[83c251909058de0](https://github.com/tomasbjerre/violations-maven-plugin/commit/83c251909058de0) Tomas Bjerre *2020-09-23 16:42:15*
+
+
 ## violations-maven-plugin-1.38
 ### No issue
 
