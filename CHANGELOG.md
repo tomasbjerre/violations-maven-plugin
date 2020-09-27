@@ -1,6 +1,15 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
+## violations-maven-plugin-1.40
+### No issue
+
+**Find Security Bugs messages**
+
+
+[9b64534ea3fef09](https://github.com/tomasbjerre/violations-maven-plugin/commit/9b64534ea3fef09) Tomas Bjerre *2020-09-27 16:23:02*
+
+
 ## violations-maven-plugin-1.39
 ### No issue
 
