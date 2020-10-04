@@ -1,6 +1,15 @@
 # Changelog
 Changelog of Violations Maven plugin.
 
+## violations-maven-plugin-1.42
+### No issue
+
+**check_name and engine_name in CodeClimate**
+
+
+[8da452a6fb20bd2](https://github.com/tomasbjerre/violations-maven-plugin/commit/8da452a6fb20bd2) Tomas Bjerre *2020-10-04 10:29:29*
+
+
 ## violations-maven-plugin-1.41
 ### GitHub #112   
 
