@@ -255,7 +255,7 @@ public class ViolationCommentsMojo extends AbstractMojo {
   private Set<Violation> getAllViolationsInDiff(final Set<Violation> unfilteredViolations)
       throws Exception {
     final Set<Violation> candidates = this.getFiltered(unfilteredViolations, this.diffMinSeverity);
-    return new ViolationsGit(candidates) //
+    return new ViolationsGit(this.violationsLogger, candidates) //
         .getViolationsInChangeset(this.gitRepo, this.diffFrom, this.diffTo);
   }
 
