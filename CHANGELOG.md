@@ -7,7 +7,7 @@ Changelog of Violations Maven plugin.
 **[maven-release-plugin] prepare for next development iteration**
 
 
-[469949ed9446969](https://github.com/tomasbjerre/violations-maven-plugin/commit/469949ed9446969) Tomas Bjerre *2021-08-05 13:08:58*
+[c0be6485752096d](https://github.com/tomasbjerre/violations-maven-plugin/commit/c0be6485752096d) Tomas Bjerre *2021-08-05 13:09:38*
 
 
 ## violations-maven-plugin-1.46
