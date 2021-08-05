@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>se.bjurr.violations</groupId>
 	<artifactId>violations-maven-plugin</artifactId>
-	<version>1.47</version>
+	<version>1.48-SNAPSHOT</version>
 	<packaging>maven-plugin</packaging>
 	<name>violations-maven-plugin</name>
 	<description>Maven plugin that will find report files from static code analysis, present and optionally fail the
@@ -14,7 +14,7 @@
 	<scm>
 		<developerConnection>scm:git:git@github.com:tomasbjerre/violations-maven-plugin.git</developerConnection>
 		<url>https://github.com/tomasbjerre/violations-maven-plugin</url>
-		<tag>violations-maven-plugin-1.47</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 	<distributionManagement>
