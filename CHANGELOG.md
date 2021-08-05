@@ -7,6 +7,28 @@ Changelog of Violations Maven plugin.
 **[maven-release-plugin] prepare for next development iteration**
 
 
+[0f36250329e6733](https://github.com/tomasbjerre/violations-maven-plugin/commit/0f36250329e6733) Tomas Bjerre *2021-08-05 12:59:06*
+
+
+## violations-maven-plugin-1.44
+### Jira plugin-1   
+
+**[maven-release-plugin] prepare release violations-maven-plugin-1.44**
+
+
+[56eec1e89d13eae](https://github.com/tomasbjerre/violations-maven-plugin/commit/56eec1e89d13eae) Tomas Bjerre *2021-08-05 12:59:02*
+
+
+### No issue
+
+**jacoco**
+
+
+[c638fd758f1dfc6](https://github.com/tomasbjerre/violations-maven-plugin/commit/c638fd758f1dfc6) Tomas Bjerre *2021-08-05 12:58:40*
+
+**[maven-release-plugin] prepare for next development iteration**
+
+
 [329b7c5bb818c43](https://github.com/tomasbjerre/violations-maven-plugin/commit/329b7c5bb818c43) Tomas Bjerre *2021-03-29 15:02:42*
 
 
