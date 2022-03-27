@@ -2,6 +2,51 @@
 
 Changelog of violations-maven-plugin.
 
+## 1.50 (2022-03-27)
+
+
+
+
+
+
+
+### Other changes
+
+**[maven-release-plugin] prepare release violations-maven-plugin-1.50**
+
+
+[20e8f](https://github.com/tomasbjerre/violations-maven-plugin/commit/20e8f09d62a27ab) Tomas Bjerre *2022-03-27 07:27:06*
+
+**[maven-release-plugin] prepare for next development iteration**
+
+
+[d3f26](https://github.com/tomasbjerre/violations-maven-plugin/commit/d3f26860c19b5e2) Tomas Bjerre *2022-03-27 07:26:05*
+
+
+## 1.49 (2022-03-27)
+
+
+
+### Features
+
+-  stepping lib versions ([442c8](https://github.com/tomasbjerre/violations-maven-plugin/commit/442c8180196c6ac) Tomas Bjerre)  
+
+
+
+
+### Other changes
+
+**[maven-release-plugin] prepare release violations-maven-plugin-1.49**
+
+
+[f85dc](https://github.com/tomasbjerre/violations-maven-plugin/commit/f85dc1c278b1e14) Tomas Bjerre *2022-03-27 07:26:01*
+
+**[maven-release-plugin] prepare for next development iteration**
+
+
+[bcc49](https://github.com/tomasbjerre/violations-maven-plugin/commit/bcc493cf8a0e37f) Tomas Bjerre *2021-08-05 13:16:40*
+
+
 ## 1.48 (2021-08-05)
 
 
