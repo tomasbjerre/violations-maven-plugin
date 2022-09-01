@@ -2,6 +2,8 @@
 
 Changelog of violations-maven-plugin.
 
+## 1.50.0 (2022-09-01)
+
 ## 1.0.0 (2022-09-01)
 
 ## violations-maven-plugin-0.1.0 (2022-09-01)
