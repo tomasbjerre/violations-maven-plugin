@@ -147,7 +147,7 @@ Missing a format? Open an issue [here](https://github.com/tomasbjerre/violations
 ## Usage ##
 There is a running example [here](https://github.com/tomasbjerre/violations-maven-plugin/tree/master/violations-maven-plugin-example).
 
-The plugin needs to run after any static code analysis tools, so put it after them in the pom. Having the following in the pom will make the plugin run with `mvn verify`: 
+The plugin needs to run after any static code analysis tools, so put it after them in the pom. Having the following in the pom will make the plugin run with `mvn validate`: 
 
 ```
   <plugins>
@@ -169,7 +169,7 @@ The plugin needs to run after any static code analysis tools, so put it after th
     <version>X</version>
     <executions>
      <execution>
-      <phase>verify</phase>
+      <phase>validate</phase>
       <goals>
        <goal>violations</goal>
       </goals>

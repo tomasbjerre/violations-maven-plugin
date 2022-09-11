@@ -20,7 +20,7 @@
 				<version>${violations.version}</version>
 				<executions>
 					<execution>
-						<phase>verify</phase>
+						<phase>validate</phase>
 						<goals>
 							<goal>violations</goal>
 						</goals>
