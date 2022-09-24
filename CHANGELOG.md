@@ -2,6 +2,12 @@
 
 Changelog of violations-maven-plugin.
 
+## violations-maven-plugin-1.50.3 (2022-09-24)
+
+### Bug Fixes
+
+-  relative in CodeClimate ([da0f2](https://github.com/tomasbjerre/violations-maven-plugin/commit/da0f21453f95d2f) Tomas Bjerre)  
+
 ## violations-maven-plugin-1.50.2 (2022-09-24)
 
 ### Bug Fixes
