@@ -2,6 +2,12 @@
 
 Changelog of violations-maven-plugin.
 
+## violations-maven-plugin-1.50.2 (2022-09-24)
+
+### Bug Fixes
+
+-  make paths relative in CodeClimate ([adaf6](https://github.com/tomasbjerre/violations-maven-plugin/commit/adaf6190b14f506) Tomas Bjerre)  [#3](https://github.com/tomasbjerre/violations-maven-plugin/issues/3)  
+
 ## 1.50.0 (2022-09-01)
 
 ## 1.0.0 (2022-09-01)
