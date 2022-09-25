@@ -15,14 +15,11 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.logging.Level;
-
 import javax.script.ScriptException;
-
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
-
 import se.bjurr.violations.git.ViolationsGit;
 import se.bjurr.violations.git.ViolationsReporterDetailLevel;
 import se.bjurr.violations.lib.ViolationsLogger;

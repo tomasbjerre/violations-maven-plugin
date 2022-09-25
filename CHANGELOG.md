@@ -2,6 +2,12 @@
 
 Changelog of violations-maven-plugin.
 
+## violations-maven-plugin-1.50.4 (2022-09-25)
+
+### Bug Fixes
+
+-  change defaultPhase to validate ([e9b60](https://github.com/tomasbjerre/violations-maven-plugin/commit/e9b603a873b2a3d) Tomas Bjerre)  [#2](https://github.com/tomasbjerre/violations-maven-plugin/issues/2)  
+
 ## violations-maven-plugin-1.50.3 (2022-09-24)
 
 ### Bug Fixes
