@@ -3,7 +3,7 @@ package se.bjurr.violations.maven.plugin;
 import static java.nio.file.StandardOpenOption.CREATE;
 import static java.nio.file.StandardOpenOption.TRUNCATE_EXISTING;
 import static java.nio.file.StandardOpenOption.WRITE;
-import static org.apache.maven.plugins.annotations.LifecyclePhase.VERIFY;
+import static org.apache.maven.plugins.annotations.LifecyclePhase.VALIDATE;
 import static se.bjurr.violations.git.ViolationsReporterApi.violationsReporterApi;
 import static se.bjurr.violations.lib.ViolationsApi.violationsApi;
 
@@ -15,11 +15,14 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.logging.Level;
+
 import javax.script.ScriptException;
+
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
+
 import se.bjurr.violations.git.ViolationsGit;
 import se.bjurr.violations.git.ViolationsReporterDetailLevel;
 import se.bjurr.violations.lib.ViolationsLogger;
@@ -29,7 +32,7 @@ import se.bjurr.violations.lib.model.codeclimate.CodeClimateTransformer;
 import se.bjurr.violations.lib.util.Filtering;
 import se.bjurr.violations.violationslib.com.google.gson.GsonBuilder;
 
-@Mojo(name = "violations", defaultPhase = VERIFY)
+@Mojo(name = "violations", defaultPhase = VALIDATE)
 public class ViolationCommentsMojo extends AbstractMojo {
 
   @Parameter(property = "printViolations", required = false, defaultValue = "true")
