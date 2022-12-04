@@ -1,14 +1,12 @@
 # Violations Maven Plugin
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/se.bjurr.violations/violations-maven-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/se.bjurr.violations/violations-maven-plugin)
 
-This is a Maven plugin for [Violations Lib](https://github.com/tomasbjerre/violations-lib). There is also a [Gradle plugin](https://github.com/tomasbjerre/violations-gradle-plugin) for this.
+This is a Maven plugin for [Violations Lib](https://github.com/tomasbjerre/violations-lib). There is also a [Gradle plugin](https://github.com/tomasbjerre/violations-gradle-plugin) and a [command line tool](https://www.npmjs.com/package/violations-command-line).
 
 It can parse results from static code analysis and:
 
  * Report violations in the build log.
  * Optionally fail the build depending on violations found.
-
-You can also do this with a [command line tool](https://www.npmjs.com/package/violations-command-line).
 
 A snippet of the output may look like this:
 ```
@@ -145,7 +143,7 @@ A number of **parsers** have been implemented. Some **parsers** can parse output
 Missing a format? Open an issue [here](https://github.com/tomasbjerre/violations-lib/issues)!
 
 ## Usage ##
-There is a running example [here](https://github.com/tomasbjerre/violations-maven-plugin/tree/master/violations-maven-plugin-example).
+There is a running example [here](https://github.com/tomasbjerre/violations-maven-plugin/tree/master/violations-maven-plugin-example). See also [bjurr-bom](https://github.com/tomasbjerre/bjurr-bom).
 
 The plugin needs to run after any static code analysis tools, so put it after them in the pom. Having the following in the pom will make the plugin run with `mvn validate`: 
 
