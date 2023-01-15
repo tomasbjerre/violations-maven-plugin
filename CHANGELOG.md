@@ -2,6 +2,12 @@
 
 Changelog of violations-maven-plugin.
 
+## violations-maven-plugin-1.50.5 (2023-01-15)
+
+### Bug Fixes
+
+-  relative paths to root in sarif/codeclimate export ([ffe34](https://github.com/tomasbjerre/violations-maven-plugin/commit/ffe34980e1009ce) Tomas Bjerre)  
+
 ## violations-maven-plugin-1.50.4 (2022-09-25)
 
 ### Bug Fixes
