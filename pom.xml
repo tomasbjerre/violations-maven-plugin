@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>se.bjurr.violations</groupId>
 	<artifactId>violations-maven-plugin</artifactId>
-	<version>1.50.6-SNAPSHOT</version>
+	<version>1.50.5-SNAPSHOT</version>
 	<packaging>maven-plugin</packaging>
 	<name>violations-maven-plugin</name>
 	<description>Maven plugin that will find report files from static code analysis, present and optionally fail the
@@ -45,9 +45,9 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
-		<changelog>1.95.5</changelog>
-		<violations>1.47.7</violations>
-		<violations-lib>1.155.8</violations-lib>
+		<changelog>1.95.6</changelog>
+		<violations>1.49.0</violations>
+		<violations-lib>1.156.1</violations-lib>
 	</properties>
 
 	<dependencies>
