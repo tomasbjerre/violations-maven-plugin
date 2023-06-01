@@ -2,6 +2,25 @@
 
 Changelog of violations-maven-plugin.
 
+## violations-maven-plugin-1.50.8 (2023-06-01)
+
+### Bug Fixes
+
+-  massive speed regression when processing lots of files ([d6a6f](https://github.com/tomasbjerre/violations-maven-plugin/commit/d6a6f0b54f11724) Tomas Bjerre)  
+
+### Other changes
+
+**[maven-release-plugin] prepare release violations-maven-plugin-1.50.8**
+
+
+[b1f6e](https://github.com/tomasbjerre/violations-maven-plugin/commit/b1f6e29567ce172) Tomas Bjerre *2023-06-01 17:01:30*
+
+**[maven-release-plugin] prepare for next development iteration**
+
+
+[c4ee9](https://github.com/tomasbjerre/violations-maven-plugin/commit/c4ee94ab94ada7b) Tomas Bjerre *2023-03-16 16:43:30*
+
+
 ## violations-maven-plugin-1.50.7 (2023-03-16)
 
 ### Bug Fixes
