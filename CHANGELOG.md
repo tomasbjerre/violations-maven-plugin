@@ -2,6 +2,26 @@
 
 Changelog of violations-maven-plugin.
 
+## violations-maven-plugin-1.50.9 (2023-09-17)
+
+### Bug Fixes
+
+-  avoiding duplicated fingerprints in CodeClimate report ([ae4fd](https://github.com/tomasbjerre/violations-maven-plugin/commit/ae4fdecbde7b761) Tomas Bjerre)  
+-  allow MSBuild in Program Files (x86) and support NU1701 ([bb263](https://github.com/tomasbjerre/violations-maven-plugin/commit/bb263282e38c442) Tomas Bjerre)  
+
+### Other changes
+
+**[maven-release-plugin] prepare release violations-maven-plugin-1.50.9**
+
+
+[c500a](https://github.com/tomasbjerre/violations-maven-plugin/commit/c500a9635285abb) Tomas Bjerre *2023-09-17 12:05:01*
+
+**[maven-release-plugin] prepare for next development iteration**
+
+
+[e8159](https://github.com/tomasbjerre/violations-maven-plugin/commit/e81599652bd1fba) Tomas Bjerre *2023-06-01 17:01:35*
+
+
 ## violations-maven-plugin-1.50.8 (2023-06-01)
 
 ### Bug Fixes
