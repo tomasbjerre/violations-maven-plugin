@@ -2,6 +2,25 @@
 
 Changelog of violations-maven-plugin.
 
+## violations-maven-plugin-2.0.0 (2024-01-27)
+
+### Breaking changes
+
+-  JGit 6 and Java 11 ([5654e](https://github.com/tomasbjerre/violations-maven-plugin/commit/5654eecb4ea237a) Tomas Bjerre)  
+
+### Other changes
+
+**[maven-release-plugin] prepare release violations-maven-plugin-2.0.0**
+
+
+[c29ab](https://github.com/tomasbjerre/violations-maven-plugin/commit/c29ab1f57578447) Tomas Bjerre *2024-01-27 08:02:52*
+
+**[maven-release-plugin] prepare for next development iteration**
+
+
+[47dc3](https://github.com/tomasbjerre/violations-maven-plugin/commit/47dc375b170b483) Tomas Bjerre *2023-09-17 12:05:05*
+
+
 ## violations-maven-plugin-1.50.9 (2023-09-17)
 
 ### Bug Fixes
