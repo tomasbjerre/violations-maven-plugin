@@ -45,9 +45,9 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
-		<changelog>1.101.0</changelog>
-		<violations>2.0.0</violations>
-		<violations-lib>1.156.7</violations-lib>
+		<changelog>2.1.0</changelog>
+		<violations>2.1.0</violations>
+		<violations-lib>1.157.0</violations-lib>
 	</properties>
 
 	<dependencies>
