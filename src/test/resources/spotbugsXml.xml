@@ -1,11 +1,453 @@
+<BugCollection sequence='0' release='' analysisTimestamp='1579441534363'
+	version='3.1.12' timestamp='1579441531000'>
+	<Project projectName='openapi-generator-core'>
+		<Jar>
+			/home/bjerre/workspace/openapi-generator-repo/modules/openapi-generator-core/target/classes</Jar>
+		<AuxClasspathEntry>
+			/home/bjerre/.m2/repository/com/google/guava/guava/26.0-jre/guava-26.0-jre.jar</AuxClasspathEntry>
+		<AuxClasspathEntry>
+			/home/bjerre/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar</AuxClasspathEntry>
+		<AuxClasspathEntry>
+			/home/bjerre/.m2/repository/org/checkerframework/checker-qual/2.5.2/checker-qual-2.5.2.jar</AuxClasspathEntry>
+		<AuxClasspathEntry>
+			/home/bjerre/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar</AuxClasspathEntry>
+		<AuxClasspathEntry>
+			/home/bjerre/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar</AuxClasspathEntry>
+		<AuxClasspathEntry>
+			/home/bjerre/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar</AuxClasspathEntry>
+		<AuxClasspathEntry>
+			/home/bjerre/.m2/repository/org/slf4j/slf4j-api/1.7.12/slf4j-api-1.7.12.jar</AuxClasspathEntry>
+		<SrcDir>
+			/home/bjerre/workspace/openapi-generator-repo/modules/openapi-generator-core/src/main/java</SrcDir>
+		<SrcDir>
+			/home/bjerre/workspace/openapi-generator-repo/modules/openapi-generator-core/target/generated-sources/annotations</SrcDir>
+		<WrkDir>
+			/home/bjerre/workspace/openapi-generator-repo/modules/openapi-generator-core/target</WrkDir>
+	</Project>
+	<BugInstance instanceOccurrenceNum='0'
+		instanceHash='833b711b348ab229fc040f7b40f5476d' cweid='218' rank='16'
+		abbrev='MS' category='MALICIOUS_CODE' priority='1'
+		type='MS_SHOULD_BE_FINAL' instanceOccurrenceMax='0'>
+		<ShortMessage>Field isn't final but should be</ShortMessage>
+		<LongMessage>org.openapitools.codegen.meta.FeatureSet.UNSPECIFIED isn't
+			final but should be</LongMessage>
+		<Class classname='org.openapitools.codegen.meta.FeatureSet'
+			primary='true'>
+			<SourceLine classname='org.openapitools.codegen.meta.FeatureSet'
+				start='29' end='177'
+				sourcepath='org/openapitools/codegen/meta/FeatureSet.java'
+				sourcefile='FeatureSet.java'>
+				<Message>At FeatureSet.java:[lines 29-177]</Message>
+			</SourceLine>
+			<Message>In class org.openapitools.codegen.meta.FeatureSet</Message>
+		</Class>
+		<Field isStatic='true'
+			classname='org.openapitools.codegen.meta.FeatureSet'
+			signature='Lorg/openapitools/codegen/meta/FeatureSet;'
+			name='UNSPECIFIED' primary='true'>
+			<SourceLine classname='org.openapitools.codegen.meta.FeatureSet'
+				sourcepath='org/openapitools/codegen/meta/FeatureSet.java'
+				sourcefile='FeatureSet.java'>
+				<Message>In FeatureSet.java</Message>
+			</SourceLine>
+			<Message>Field org.openapitools.codegen.meta.FeatureSet.UNSPECIFIED</Message>
+		</Field>
+		<SourceLine endBytecode='6'
+			classname='org.openapitools.codegen.meta.FeatureSet' start='30'
+			end='30' sourcepath='org/openapitools/codegen/meta/FeatureSet.java'
+			sourcefile='FeatureSet.java' startBytecode='6' primary='true'>
+			<Message>At FeatureSet.java:[line 30]</Message>
+		</SourceLine>
+	</BugInstance>
+	<BugCategory category='MALICIOUS_CODE'>
+		<Description>Malicious code vulnerability</Description>
+	</BugCategory>
+	<BugPattern abbrev='MS' category='MALICIOUS_CODE' type='MS_SHOULD_BE_FINAL'>
+		<ShortDescription>Field isn't final but should be</ShortDescription>
+		<Details>
 
-<BugCollection sequence='0' release='' analysisTimestamp='1579441534363' version='3.1.12' timestamp='1579441531000'><Project projectName='openapi-generator-core'><Jar>/home/bjerre/workspace/openapi-generator-repo/modules/openapi-generator-core/target/classes</Jar><AuxClasspathEntry>/home/bjerre/.m2/repository/com/google/guava/guava/26.0-jre/guava-26.0-jre.jar</AuxClasspathEntry><AuxClasspathEntry>/home/bjerre/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar</AuxClasspathEntry><AuxClasspathEntry>/home/bjerre/.m2/repository/org/checkerframework/checker-qual/2.5.2/checker-qual-2.5.2.jar</AuxClasspathEntry><AuxClasspathEntry>/home/bjerre/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar</AuxClasspathEntry><AuxClasspathEntry>/home/bjerre/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar</AuxClasspathEntry><AuxClasspathEntry>/home/bjerre/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar</AuxClasspathEntry><AuxClasspathEntry>/home/bjerre/.m2/repository/org/slf4j/slf4j-api/1.7.12/slf4j-api-1.7.12.jar</AuxClasspathEntry><SrcDir>/home/bjerre/workspace/openapi-generator-repo/modules/openapi-generator-core/src/main/java</SrcDir><SrcDir>/home/bjerre/workspace/openapi-generator-repo/modules/openapi-generator-core/target/generated-sources/annotations</SrcDir><WrkDir>/home/bjerre/workspace/openapi-generator-repo/modules/openapi-generator-core/target</WrkDir></Project><BugInstance instanceOccurrenceNum='0' instanceHash='833b711b348ab229fc040f7b40f5476d' cweid='218' rank='16' abbrev='MS' category='MALICIOUS_CODE' priority='1' type='MS_SHOULD_BE_FINAL' instanceOccurrenceMax='0'><ShortMessage>Field isn't final but should be</ShortMessage><LongMessage>org.openapitools.codegen.meta.FeatureSet.UNSPECIFIED isn't final but should be</LongMessage><Class classname='org.openapitools.codegen.meta.FeatureSet' primary='true'><SourceLine classname='org.openapitools.codegen.meta.FeatureSet' start='29' end='177' sourcepath='org/openapitools/codegen/meta/FeatureSet.java' sourcefile='FeatureSet.java'><Message>At FeatureSet.java:[lines 29-177]</Message></SourceLine><Message>In class org.openapitools.codegen.meta.FeatureSet</Message></Class><Field isStatic='true' classname='org.openapitools.codegen.meta.FeatureSet' signature='Lorg/openapitools/codegen/meta/FeatureSet;' name='UNSPECIFIED' primary='true'><SourceLine classname='org.openapitools.codegen.meta.FeatureSet' sourcepath='org/openapitools/codegen/meta/FeatureSet.java' sourcefile='FeatureSet.java'><Message>In FeatureSet.java</Message></SourceLine><Message>Field org.openapitools.codegen.meta.FeatureSet.UNSPECIFIED</Message></Field><SourceLine endBytecode='6' classname='org.openapitools.codegen.meta.FeatureSet' start='30' end='30' sourcepath='org/openapitools/codegen/meta/FeatureSet.java' sourcefile='FeatureSet.java' startBytecode='6' primary='true'><Message>At FeatureSet.java:[line 30]</Message></SourceLine></BugInstance><BugCategory category='MALICIOUS_CODE'><Description>Malicious code vulnerability</Description></BugCategory><BugPattern abbrev='MS' category='MALICIOUS_CODE' type='MS_SHOULD_BE_FINAL'><ShortDescription>Field isn't final but should be</ShortDescription><Details>
+			&lt;p&gt;
+			This static field public but not final, and
+			could be changed by malicious code or
+			by accident from another package.
+			The field could be made final to avoid
+			this vulnerability.&lt;/p&gt;
 
-   &lt;p&gt;
-This static field public but not final, and
-could be changed by malicious code or
-        by accident from another package.
-        The field could be made final to avoid
-        this vulnerability.&lt;/p&gt;
-
-    </Details></BugPattern><BugCode cweid='218' abbrev='MS'><Description>Mutable static field</Description></BugCode><Errors missingClasses='0' errors='0'></Errors><FindBugsSummary num_packages='6' total_classes='36' priority_1='1' total_size='1391' clock_seconds='3.33' referenced_classes='93' vm_version='25.171-b11' total_bugs='1' java_version='1.8.0_171' gc_seconds='0.10' alloc_mbytes='455.50' cpu_seconds='14.28' peak_mbytes='198.98' timestamp='Sun, 19 Jan 2020 14:45:31 +0100'><FileStats path='org/openapitools/codegen/api/AbstractTemplatingEngineAdapter.java' size='15' bugCount='0'></FileStats><FileStats path='org/openapitools/codegen/api/TemplatingEngineAdapter.java' size='4' bugCount='0'></FileStats><FileStats path='org/openapitools/codegen/api/TemplatingGenerator.java' size='3' bugCount='0'></FileStats><FileStats path='org/openapitools/codegen/config/Context.java' size='16' bugCount='0'></FileStats><FileStats path='org/openapitools/codegen/config/GeneratorSettings.java' size='447' bugCount='0'></FileStats><FileStats path='org/openapitools/codegen/config/WorkflowSettings.java' size='265' bugCount='0'></FileStats><FileStats path='org/openapitools/codegen/meta/FeatureSet.java' size='203' bugHash='a1d6163d2eeeba2b5098df485ed07114' bugCount='1'></FileStats><FileStats path='org/openapitools/codegen/meta/GeneratorMetadata.java' size='70' bugCount='0'></FileStats><FileStats path='org/openapitools/codegen/meta/Stability.java' size='26' bugCount='0'></FileStats><FileStats path='org/openapitools/codegen/meta/features/ClientModificationFeature.java' size='13' bugCount='0'></FileStats><FileStats path='org/openapitools/codegen/meta/features/DataTypeFeature.java' size='65' bugCount='0'></FileStats><FileStats path='org/openapitools/codegen/meta/features/DocumentationFeature.java' size='13' bugCount='0'></FileStats><FileStats path='org/openapitools/codegen/meta/features/GlobalFeature.java' size='37' bugCount='0'></FileStats><FileStats path='org/openapitools/codegen/meta/features/ParameterFeature.java' size='21' bugCount='0'></FileStats><FileStats path='org/openapitools/codegen/meta/features/SchemaSupportFeature.java' size='15' bugCount='0'></FileStats><FileStats path='org/openapitools/codegen/meta/features/SecurityFeature.java' size='23' bugCount='0'></FileStats><FileStats path='org/openapitools/codegen/meta/features/WireFormatFeature.java' size='15' bugCount='0'></FileStats><FileStats path='org/openapitools/codegen/meta/features/annotations/OAS2.java' size='1' bugCount='0'></FileStats><FileStats path='org/openapitools/codegen/meta/features/annotations/OAS3.java' size='1' bugCount='0'></FileStats><FileStats path='org/openapitools/codegen/meta/features/annotations/ToolingExtension.java' size='1' bugCount='0'></FileStats><FileStats path='org/openapitools/codegen/validation/GenericValidator.java' size='17' bugCount='0'></FileStats><FileStats path='org/openapitools/codegen/validation/Invalid.java' size='14' bugCount='0'></FileStats><FileStats path='org/openapitools/codegen/validation/Severity.java' size='11' bugCount='0'></FileStats><FileStats path='org/openapitools/codegen/validation/Valid.java' size='12' bugCount='0'></FileStats><FileStats path='org/openapitools/codegen/validation/Validated.java' size='11' bugCount='0'></FileStats><FileStats path='org/openapitools/codegen/validation/ValidationResult.java' size='39' bugCount='0'></FileStats><FileStats path='org/openapitools/codegen/validation/ValidationRule.java' size='31' bugCount='0'></FileStats><FileStats path='org/openapitools/codegen/validation/Validator.java' size='2' bugCount='0'></FileStats><PackageStats package='org.openapitools.codegen.api' total_bugs='0' total_size='22' total_types='3'><ClassStats bugs='0' size='15' interface='false' sourceFile='AbstractTemplatingEngineAdapter.java' class='org.openapitools.codegen.api.AbstractTemplatingEngineAdapter'></ClassStats><ClassStats bugs='0' size='4' interface='true' sourceFile='TemplatingEngineAdapter.java' class='org.openapitools.codegen.api.TemplatingEngineAdapter'></ClassStats><ClassStats bugs='0' size='3' interface='true' sourceFile='TemplatingGenerator.java' class='org.openapitools.codegen.api.TemplatingGenerator'></ClassStats></PackageStats><PackageStats package='org.openapitools.codegen.config' total_bugs='0' total_size='728' total_types='7'><ClassStats bugs='0' size='16' interface='false' sourceFile='Context.java' class='org.openapitools.codegen.config.Context'></ClassStats><ClassStats bugs='0' size='259' interface='false' sourceFile='GeneratorSettings.java' class='org.openapitools.codegen.config.GeneratorSettings'></ClassStats><ClassStats bugs='0' size='1' interface='false' sourceFile='GeneratorSettings.java' class='org.openapitools.codegen.config.GeneratorSettings$1'></ClassStats><ClassStats bugs='0' size='187' interface='false' sourceFile='GeneratorSettings.java' class='org.openapitools.codegen.config.GeneratorSettings$Builder'></ClassStats><ClassStats bugs='0' size='147' interface='false' sourceFile='WorkflowSettings.java' class='org.openapitools.codegen.config.WorkflowSettings'></ClassStats><ClassStats bugs='0' size='1' interface='false' sourceFile='WorkflowSettings.java' class='org.openapitools.codegen.config.WorkflowSettings$1'></ClassStats><ClassStats bugs='0' size='117' interface='false' sourceFile='WorkflowSettings.java' class='org.openapitools.codegen.config.WorkflowSettings$Builder'></ClassStats></PackageStats><PackageStats package='org.openapitools.codegen.meta' priority_1='1' total_bugs='1' total_size='299' total_types='7'><ClassStats bugs='1' size='74' priority_1='1' interface='false' sourceFile='FeatureSet.java' class='org.openapitools.codegen.meta.FeatureSet'></ClassStats><ClassStats bugs='0' size='1' interface='false' sourceFile='FeatureSet.java' class='org.openapitools.codegen.meta.FeatureSet$1'></ClassStats><ClassStats bugs='0' size='128' interface='false' sourceFile='FeatureSet.java' class='org.openapitools.codegen.meta.FeatureSet$Builder'></ClassStats><ClassStats bugs='0' size='33' interface='false' sourceFile='GeneratorMetadata.java' class='org.openapitools.codegen.meta.GeneratorMetadata'></ClassStats><ClassStats bugs='0' size='1' interface='false' sourceFile='GeneratorMetadata.java' class='org.openapitools.codegen.meta.GeneratorMetadata$1'></ClassStats><ClassStats bugs='0' size='36' interface='false' sourceFile='GeneratorMetadata.java' class='org.openapitools.codegen.meta.GeneratorMetadata$Builder'></ClassStats><ClassStats bugs='0' size='26' interface='false' sourceFile='Stability.java' class='org.openapitools.codegen.meta.Stability'></ClassStats></PackageStats><PackageStats package='org.openapitools.codegen.meta.features' total_bugs='0' total_size='202' total_types='8'><ClassStats bugs='0' size='13' interface='false' sourceFile='ClientModificationFeature.java' class='org.openapitools.codegen.meta.features.ClientModificationFeature'></ClassStats><ClassStats bugs='0' size='65' interface='false' sourceFile='DataTypeFeature.java' class='org.openapitools.codegen.meta.features.DataTypeFeature'></ClassStats><ClassStats bugs='0' size='13' interface='false' sourceFile='DocumentationFeature.java' class='org.openapitools.codegen.meta.features.DocumentationFeature'></ClassStats><ClassStats bugs='0' size='37' interface='false' sourceFile='GlobalFeature.java' class='org.openapitools.codegen.meta.features.GlobalFeature'></ClassStats><ClassStats bugs='0' size='21' interface='false' sourceFile='ParameterFeature.java' class='org.openapitools.codegen.meta.features.ParameterFeature'></ClassStats><ClassStats bugs='0' size='15' interface='false' sourceFile='SchemaSupportFeature.java' class='org.openapitools.codegen.meta.features.SchemaSupportFeature'></ClassStats><ClassStats bugs='0' size='23' interface='false' sourceFile='SecurityFeature.java' class='org.openapitools.codegen.meta.features.SecurityFeature'></ClassStats><ClassStats bugs='0' size='15' interface='false' sourceFile='WireFormatFeature.java' class='org.openapitools.codegen.meta.features.WireFormatFeature'></ClassStats></PackageStats><PackageStats package='org.openapitools.codegen.meta.features.annotations' total_bugs='0' total_size='3' total_types='3'><ClassStats bugs='0' size='1' interface='true' sourceFile='OAS2.java' class='org.openapitools.codegen.meta.features.annotations.OAS2'></ClassStats><ClassStats bugs='0' size='1' interface='true' sourceFile='OAS3.java' class='org.openapitools.codegen.meta.features.annotations.OAS3'></ClassStats><ClassStats bugs='0' size='1' interface='true' sourceFile='ToolingExtension.java' class='org.openapitools.codegen.meta.features.annotations.ToolingExtension'></ClassStats></PackageStats><PackageStats package='org.openapitools.codegen.validation' total_bugs='0' total_size='137' total_types='8'><ClassStats bugs='0' size='17' interface='false' sourceFile='GenericValidator.java' class='org.openapitools.codegen.validation.GenericValidator'></ClassStats><ClassStats bugs='0' size='14' interface='false' sourceFile='Invalid.java' class='org.openapitools.codegen.validation.Invalid'></ClassStats><ClassStats bugs='0' size='11' interface='false' sourceFile='Severity.java' class='org.openapitools.codegen.validation.Severity'></ClassStats><ClassStats bugs='0' size='12' interface='false' sourceFile='Valid.java' class='org.openapitools.codegen.validation.Valid'></ClassStats><ClassStats bugs='0' size='11' interface='false' sourceFile='Validated.java' class='org.openapitools.codegen.validation.Validated'></ClassStats><ClassStats bugs='0' size='39' interface='false' sourceFile='ValidationResult.java' class='org.openapitools.codegen.validation.ValidationResult'></ClassStats><ClassStats bugs='0' size='31' interface='false' sourceFile='ValidationRule.java' class='org.openapitools.codegen.validation.ValidationRule'></ClassStats><ClassStats bugs='0' size='2' interface='true' sourceFile='Validator.java' class='org.openapitools.codegen.validation.Validator'></ClassStats></PackageStats><FindBugsProfile><ClassProfile avgMicrosecondsPerInvocation='488' totalMilliseconds='337' name='edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine' maxMicrosecondsPerInvocation='39452' standardDeviationMicrosecondsPerInvocation='1893' invocations='690'></ClassProfile><ClassProfile avgMicrosecondsPerInvocation='1986' totalMilliseconds='184' name='edu.umd.cs.findbugs.detect.FieldItemSummary' maxMicrosecondsPerInvocation='14894' standardDeviationMicrosecondsPerInvocation='3383' invocations='93'></ClassProfile><ClassProfile avgMicrosecondsPerInvocation='1610' totalMilliseconds='149' name='edu.umd.cs.findbugs.detect.FindNoSideEffectMethods' maxMicrosecondsPerInvocation='15864' standardDeviationMicrosecondsPerInvocation='2808' invocations='93'></ClassProfile><ClassProfile avgMicrosecondsPerInvocation='370' totalMilliseconds='130' name='edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder' maxMicrosecondsPerInvocation='16995' standardDeviationMicrosecondsPerInvocation='1295' invocations='351'></ClassProfile><ClassProfile avgMicrosecondsPerInvocation='171' totalMilliseconds='118' name='edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine' maxMicrosecondsPerInvocation='5973' standardDeviationMicrosecondsPerInvocation='322' invocations='694'></ClassProfile><ClassProfile avgMicrosecondsPerInvocation='188' totalMilliseconds='110' name='edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory' maxMicrosecondsPerInvocation='4074' standardDeviationMicrosecondsPerInvocation='365' invocations='587'></ClassProfile><ClassProfile avgMicrosecondsPerInvocation='310' totalMilliseconds='108' name='edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory' maxMicrosecondsPerInvocation='8658' standardDeviationMicrosecondsPerInvocation='788' invocations='351'></ClassProfile><ClassProfile avgMicrosecondsPerInvocation='268' totalMilliseconds='94' name='edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory' maxMicrosecondsPerInvocation='20801' standardDeviationMicrosecondsPerInvocation='1158' invocations='351'></ClassProfile><ClassProfile avgMicrosecondsPerInvocation='255' totalMilliseconds='91' name='edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory' maxMicrosecondsPerInvocation='65186' standardDeviationMicrosecondsPerInvocation='3432' invocations='359'></ClassProfile><ClassProfile avgMicrosecondsPerInvocation='239' totalMilliseconds='84' name='edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory' maxMicrosecondsPerInvocation='6226' standardDeviationMicrosecondsPerInvocation='603' invocations='351'></ClassProfile><ClassProfile avgMicrosecondsPerInvocation='233' totalMilliseconds='81' name='edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory' maxMicrosecondsPerInvocation='14742' standardDeviationMicrosecondsPerInvocation='815' invocations='351'></ClassProfile><ClassProfile avgMicrosecondsPerInvocation='229' totalMilliseconds='80' name='edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory' maxMicrosecondsPerInvocation='17377' standardDeviationMicrosecondsPerInvocation='988' invocations='351'></ClassProfile><ClassProfile avgMicrosecondsPerInvocation='714' totalMilliseconds='66' name='edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers' maxMicrosecondsPerInvocation='10329' standardDeviationMicrosecondsPerInvocation='1401' invocations='93'></ClassProfile><ClassProfile avgMicrosecondsPerInvocation='99' totalMilliseconds='63' name='edu.umd.cs.findbugs.util.TopologicalSort' maxMicrosecondsPerInvocation='11788' standardDeviationMicrosecondsPerInvocation='489' invocations='641'></ClassProfile><ClassProfile avgMicrosecondsPerInvocation='433' totalMilliseconds='60' name='edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine' maxMicrosecondsPerInvocation='14676' standardDeviationMicrosecondsPerInvocation='1471' invocations='140'></ClassProfile><ClassProfile avgMicrosecondsPerInvocation='542' totalMilliseconds='50' name='edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures' maxMicrosecondsPerInvocation='4985' standardDeviationMicrosecondsPerInvocation='1002' invocations='93'></ClassProfile><ClassProfile avgMicrosecondsPerInvocation='500' totalMilliseconds='46' name='edu.umd.cs.findbugs.detect.CalledMethods' maxMicrosecondsPerInvocation='4700' standardDeviationMicrosecondsPerInvocation='855' invocations='93'></ClassProfile><ClassProfile avgMicrosecondsPerInvocation='486' totalMilliseconds='45' name='edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical' maxMicrosecondsPerInvocation='10328' standardDeviationMicrosecondsPerInvocation='1310' invocations='93'></ClassProfile><ClassProfile avgMicrosecondsPerInvocation='444' totalMilliseconds='41' name='edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase' maxMicrosecondsPerInvocation='5178' standardDeviationMicrosecondsPerInvocation='775' invocations='93'></ClassProfile><ClassProfile avgMicrosecondsPerInvocation='249' totalMilliseconds='40' name='edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis' maxMicrosecondsPerInvocation='2536' standardDeviationMicrosecondsPerInvocation='348' invocations='161'></ClassProfile><ClassProfile avgMicrosecondsPerInvocation='349' totalMilliseconds='32' name='edu.umd.cs.findbugs.detect.BuildStringPassthruGraph' maxMicrosecondsPerInvocation='5243' standardDeviationMicrosecondsPerInvocation='787' invocations='93'></ClassProfile><ClassProfile avgMicrosecondsPerInvocation='319' totalMilliseconds='29' name='edu.umd.cs.findbugs.detect.ReflectiveClasses' maxMicrosecondsPerInvocation='2191' standardDeviationMicrosecondsPerInvocation='554' invocations='93'></ClassProfile><ClassProfile avgMicrosecondsPerInvocation='310' totalMilliseconds='28' name='edu.umd.cs.findbugs.detect.ExplicitSerialization' maxMicrosecondsPerInvocation='6116' standardDeviationMicrosecondsPerInvocation='1145' invocations='93'></ClassProfile><ClassProfile avgMicrosecondsPerInvocation='801' totalMilliseconds='28' name='edu.umd.cs.findbugs.detect.NoteUnconditionalParamDerefs' maxMicrosecondsPerInvocation='20739' standardDeviationMicrosecondsPerInvocation='3400' invocations='36'></ClassProfile><ClassProfile avgMicrosecondsPerInvocation='697' totalMilliseconds='25' name='edu.umd.cs.findbugs.detect.FindInconsistentSync2' maxMicrosecondsPerInvocation='4835' standardDeviationMicrosecondsPerInvocation='1077' invocations='36'></ClassProfile><ClassProfile avgMicrosecondsPerInvocation='5' totalMilliseconds='24' name='edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase' maxMicrosecondsPerInvocation='1387' standardDeviationMicrosecondsPerInvocation='32' invocations='4676'></ClassProfile><ClassProfile avgMicrosecondsPerInvocation='67' totalMilliseconds='23' name='edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory' maxMicrosecondsPerInvocation='1735' standardDeviationMicrosecondsPerInvocation='157' invocations='351'></ClassProfile></FindBugsProfile></FindBugsSummary><ClassFeatures></ClassFeatures><History></History></BugCollection>
+		</Details>
+	</BugPattern>
+	<BugCode cweid='218' abbrev='MS'>
+		<Description>Mutable static field</Description>
+	</BugCode>
+	<Errors missingClasses='0' errors='0'></Errors>
+	<FindBugsSummary num_packages='6' total_classes='36' priority_1='1'
+		total_size='1391' clock_seconds='3.33' referenced_classes='93'
+		vm_version='25.171-b11' total_bugs='1' java_version='1.8.0_171'
+		gc_seconds='0.10' alloc_mbytes='455.50' cpu_seconds='14.28'
+		peak_mbytes='198.98' timestamp='Sun, 19 Jan 2020 14:45:31 +0100'>
+		<FileStats
+			path='org/openapitools/codegen/api/AbstractTemplatingEngineAdapter.java'
+			size='15' bugCount='0'></FileStats>
+		<FileStats
+			path='org/openapitools/codegen/api/TemplatingEngineAdapter.java'
+			size='4' bugCount='0'></FileStats>
+		<FileStats path='org/openapitools/codegen/api/TemplatingGenerator.java'
+			size='3' bugCount='0'></FileStats>
+		<FileStats path='org/openapitools/codegen/config/Context.java' size='16'
+			bugCount='0'></FileStats>
+		<FileStats path='org/openapitools/codegen/config/GeneratorSettings.java'
+			size='447' bugCount='0'></FileStats>
+		<FileStats path='org/openapitools/codegen/config/WorkflowSettings.java'
+			size='265' bugCount='0'></FileStats>
+		<FileStats path='org/openapitools/codegen/meta/FeatureSet.java'
+			size='203' bugHash='a1d6163d2eeeba2b5098df485ed07114' bugCount='1'></FileStats>
+		<FileStats path='org/openapitools/codegen/meta/GeneratorMetadata.java'
+			size='70' bugCount='0'></FileStats>
+		<FileStats path='org/openapitools/codegen/meta/Stability.java' size='26'
+			bugCount='0'></FileStats>
+		<FileStats
+			path='org/openapitools/codegen/meta/features/ClientModificationFeature.java'
+			size='13' bugCount='0'></FileStats>
+		<FileStats
+			path='org/openapitools/codegen/meta/features/DataTypeFeature.java'
+			size='65' bugCount='0'></FileStats>
+		<FileStats
+			path='org/openapitools/codegen/meta/features/DocumentationFeature.java'
+			size='13' bugCount='0'></FileStats>
+		<FileStats
+			path='org/openapitools/codegen/meta/features/GlobalFeature.java'
+			size='37' bugCount='0'></FileStats>
+		<FileStats
+			path='org/openapitools/codegen/meta/features/ParameterFeature.java'
+			size='21' bugCount='0'></FileStats>
+		<FileStats
+			path='org/openapitools/codegen/meta/features/SchemaSupportFeature.java'
+			size='15' bugCount='0'></FileStats>
+		<FileStats
+			path='org/openapitools/codegen/meta/features/SecurityFeature.java'
+			size='23' bugCount='0'></FileStats>
+		<FileStats
+			path='org/openapitools/codegen/meta/features/WireFormatFeature.java'
+			size='15' bugCount='0'></FileStats>
+		<FileStats
+			path='org/openapitools/codegen/meta/features/annotations/OAS2.java'
+			size='1' bugCount='0'></FileStats>
+		<FileStats
+			path='org/openapitools/codegen/meta/features/annotations/OAS3.java'
+			size='1' bugCount='0'></FileStats>
+		<FileStats
+			path='org/openapitools/codegen/meta/features/annotations/ToolingExtension.java'
+			size='1' bugCount='0'></FileStats>
+		<FileStats
+			path='org/openapitools/codegen/validation/GenericValidator.java'
+			size='17' bugCount='0'></FileStats>
+		<FileStats path='org/openapitools/codegen/validation/Invalid.java'
+			size='14' bugCount='0'></FileStats>
+		<FileStats path='org/openapitools/codegen/validation/Severity.java'
+			size='11' bugCount='0'></FileStats>
+		<FileStats path='org/openapitools/codegen/validation/Valid.java'
+			size='12' bugCount='0'></FileStats>
+		<FileStats path='org/openapitools/codegen/validation/Validated.java'
+			size='11' bugCount='0'></FileStats>
+		<FileStats
+			path='org/openapitools/codegen/validation/ValidationResult.java'
+			size='39' bugCount='0'></FileStats>
+		<FileStats
+			path='org/openapitools/codegen/validation/ValidationRule.java'
+			size='31' bugCount='0'></FileStats>
+		<FileStats path='org/openapitools/codegen/validation/Validator.java'
+			size='2' bugCount='0'></FileStats>
+		<PackageStats package='org.openapitools.codegen.api' total_bugs='0'
+			total_size='22' total_types='3'>
+			<ClassStats bugs='0' size='15' interface='false'
+				sourceFile='AbstractTemplatingEngineAdapter.java'
+				class='org.openapitools.codegen.api.AbstractTemplatingEngineAdapter'></ClassStats>
+			<ClassStats bugs='0' size='4' interface='true'
+				sourceFile='TemplatingEngineAdapter.java'
+				class='org.openapitools.codegen.api.TemplatingEngineAdapter'></ClassStats>
+			<ClassStats bugs='0' size='3' interface='true'
+				sourceFile='TemplatingGenerator.java'
+				class='org.openapitools.codegen.api.TemplatingGenerator'></ClassStats>
+		</PackageStats>
+		<PackageStats package='org.openapitools.codegen.config' total_bugs='0'
+			total_size='728' total_types='7'>
+			<ClassStats bugs='0' size='16' interface='false'
+				sourceFile='Context.java'
+				class='org.openapitools.codegen.config.Context'></ClassStats>
+			<ClassStats bugs='0' size='259' interface='false'
+				sourceFile='GeneratorSettings.java'
+				class='org.openapitools.codegen.config.GeneratorSettings'></ClassStats>
+			<ClassStats bugs='0' size='1' interface='false'
+				sourceFile='GeneratorSettings.java'
+				class='org.openapitools.codegen.config.GeneratorSettings$1'></ClassStats>
+			<ClassStats bugs='0' size='187' interface='false'
+				sourceFile='GeneratorSettings.java'
+				class='org.openapitools.codegen.config.GeneratorSettings$Builder'></ClassStats>
+			<ClassStats bugs='0' size='147' interface='false'
+				sourceFile='WorkflowSettings.java'
+				class='org.openapitools.codegen.config.WorkflowSettings'></ClassStats>
+			<ClassStats bugs='0' size='1' interface='false'
+				sourceFile='WorkflowSettings.java'
+				class='org.openapitools.codegen.config.WorkflowSettings$1'></ClassStats>
+			<ClassStats bugs='0' size='117' interface='false'
+				sourceFile='WorkflowSettings.java'
+				class='org.openapitools.codegen.config.WorkflowSettings$Builder'></ClassStats>
+		</PackageStats>
+		<PackageStats package='org.openapitools.codegen.meta' priority_1='1'
+			total_bugs='1' total_size='299' total_types='7'>
+			<ClassStats bugs='1' size='74' priority_1='1' interface='false'
+				sourceFile='FeatureSet.java'
+				class='org.openapitools.codegen.meta.FeatureSet'></ClassStats>
+			<ClassStats bugs='0' size='1' interface='false'
+				sourceFile='FeatureSet.java'
+				class='org.openapitools.codegen.meta.FeatureSet$1'></ClassStats>
+			<ClassStats bugs='0' size='128' interface='false'
+				sourceFile='FeatureSet.java'
+				class='org.openapitools.codegen.meta.FeatureSet$Builder'></ClassStats>
+			<ClassStats bugs='0' size='33' interface='false'
+				sourceFile='GeneratorMetadata.java'
+				class='org.openapitools.codegen.meta.GeneratorMetadata'></ClassStats>
+			<ClassStats bugs='0' size='1' interface='false'
+				sourceFile='GeneratorMetadata.java'
+				class='org.openapitools.codegen.meta.GeneratorMetadata$1'></ClassStats>
+			<ClassStats bugs='0' size='36' interface='false'
+				sourceFile='GeneratorMetadata.java'
+				class='org.openapitools.codegen.meta.GeneratorMetadata$Builder'></ClassStats>
+			<ClassStats bugs='0' size='26' interface='false'
+				sourceFile='Stability.java'
+				class='org.openapitools.codegen.meta.Stability'></ClassStats>
+		</PackageStats>
+		<PackageStats package='org.openapitools.codegen.meta.features'
+			total_bugs='0' total_size='202' total_types='8'>
+			<ClassStats bugs='0' size='13' interface='false'
+				sourceFile='ClientModificationFeature.java'
+				class='org.openapitools.codegen.meta.features.ClientModificationFeature'></ClassStats>
+			<ClassStats bugs='0' size='65' interface='false'
+				sourceFile='DataTypeFeature.java'
+				class='org.openapitools.codegen.meta.features.DataTypeFeature'></ClassStats>
+			<ClassStats bugs='0' size='13' interface='false'
+				sourceFile='DocumentationFeature.java'
+				class='org.openapitools.codegen.meta.features.DocumentationFeature'></ClassStats>
+			<ClassStats bugs='0' size='37' interface='false'
+				sourceFile='GlobalFeature.java'
+				class='org.openapitools.codegen.meta.features.GlobalFeature'></ClassStats>
+			<ClassStats bugs='0' size='21' interface='false'
+				sourceFile='ParameterFeature.java'
+				class='org.openapitools.codegen.meta.features.ParameterFeature'></ClassStats>
+			<ClassStats bugs='0' size='15' interface='false'
+				sourceFile='SchemaSupportFeature.java'
+				class='org.openapitools.codegen.meta.features.SchemaSupportFeature'></ClassStats>
+			<ClassStats bugs='0' size='23' interface='false'
+				sourceFile='SecurityFeature.java'
+				class='org.openapitools.codegen.meta.features.SecurityFeature'></ClassStats>
+			<ClassStats bugs='0' size='15' interface='false'
+				sourceFile='WireFormatFeature.java'
+				class='org.openapitools.codegen.meta.features.WireFormatFeature'></ClassStats>
+		</PackageStats>
+		<PackageStats
+			package='org.openapitools.codegen.meta.features.annotations'
+			total_bugs='0' total_size='3' total_types='3'>
+			<ClassStats bugs='0' size='1' interface='true'
+				sourceFile='OAS2.java'
+				class='org.openapitools.codegen.meta.features.annotations.OAS2'></ClassStats>
+			<ClassStats bugs='0' size='1' interface='true'
+				sourceFile='OAS3.java'
+				class='org.openapitools.codegen.meta.features.annotations.OAS3'></ClassStats>
+			<ClassStats bugs='0' size='1' interface='true'
+				sourceFile='ToolingExtension.java'
+				class='org.openapitools.codegen.meta.features.annotations.ToolingExtension'></ClassStats>
+		</PackageStats>
+		<PackageStats package='org.openapitools.codegen.validation'
+			total_bugs='0' total_size='137' total_types='8'>
+			<ClassStats bugs='0' size='17' interface='false'
+				sourceFile='GenericValidator.java'
+				class='org.openapitools.codegen.validation.GenericValidator'></ClassStats>
+			<ClassStats bugs='0' size='14' interface='false'
+				sourceFile='Invalid.java'
+				class='org.openapitools.codegen.validation.Invalid'></ClassStats>
+			<ClassStats bugs='0' size='11' interface='false'
+				sourceFile='Severity.java'
+				class='org.openapitools.codegen.validation.Severity'></ClassStats>
+			<ClassStats bugs='0' size='12' interface='false'
+				sourceFile='Valid.java'
+				class='org.openapitools.codegen.validation.Valid'></ClassStats>
+			<ClassStats bugs='0' size='11' interface='false'
+				sourceFile='Validated.java'
+				class='org.openapitools.codegen.validation.Validated'></ClassStats>
+			<ClassStats bugs='0' size='39' interface='false'
+				sourceFile='ValidationResult.java'
+				class='org.openapitools.codegen.validation.ValidationResult'></ClassStats>
+			<ClassStats bugs='0' size='31' interface='false'
+				sourceFile='ValidationRule.java'
+				class='org.openapitools.codegen.validation.ValidationRule'></ClassStats>
+			<ClassStats bugs='0' size='2' interface='true'
+				sourceFile='Validator.java'
+				class='org.openapitools.codegen.validation.Validator'></ClassStats>
+		</PackageStats>
+		<FindBugsProfile>
+			<ClassProfile avgMicrosecondsPerInvocation='488'
+				totalMilliseconds='337'
+				name='edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine'
+				maxMicrosecondsPerInvocation='39452'
+				standardDeviationMicrosecondsPerInvocation='1893'
+				invocations='690'></ClassProfile>
+			<ClassProfile avgMicrosecondsPerInvocation='1986'
+				totalMilliseconds='184'
+				name='edu.umd.cs.findbugs.detect.FieldItemSummary'
+				maxMicrosecondsPerInvocation='14894'
+				standardDeviationMicrosecondsPerInvocation='3383'
+				invocations='93'></ClassProfile>
+			<ClassProfile avgMicrosecondsPerInvocation='1610'
+				totalMilliseconds='149'
+				name='edu.umd.cs.findbugs.detect.FindNoSideEffectMethods'
+				maxMicrosecondsPerInvocation='15864'
+				standardDeviationMicrosecondsPerInvocation='2808'
+				invocations='93'></ClassProfile>
+			<ClassProfile avgMicrosecondsPerInvocation='370'
+				totalMilliseconds='130'
+				name='edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder'
+				maxMicrosecondsPerInvocation='16995'
+				standardDeviationMicrosecondsPerInvocation='1295'
+				invocations='351'></ClassProfile>
+			<ClassProfile avgMicrosecondsPerInvocation='171'
+				totalMilliseconds='118'
+				name='edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine'
+				maxMicrosecondsPerInvocation='5973'
+				standardDeviationMicrosecondsPerInvocation='322'
+				invocations='694'></ClassProfile>
+			<ClassProfile avgMicrosecondsPerInvocation='188'
+				totalMilliseconds='110'
+				name='edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory'
+				maxMicrosecondsPerInvocation='4074'
+				standardDeviationMicrosecondsPerInvocation='365'
+				invocations='587'></ClassProfile>
+			<ClassProfile avgMicrosecondsPerInvocation='310'
+				totalMilliseconds='108'
+				name='edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory'
+				maxMicrosecondsPerInvocation='8658'
+				standardDeviationMicrosecondsPerInvocation='788'
+				invocations='351'></ClassProfile>
+			<ClassProfile avgMicrosecondsPerInvocation='268'
+				totalMilliseconds='94'
+				name='edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory'
+				maxMicrosecondsPerInvocation='20801'
+				standardDeviationMicrosecondsPerInvocation='1158'
+				invocations='351'></ClassProfile>
+			<ClassProfile avgMicrosecondsPerInvocation='255'
+				totalMilliseconds='91'
+				name='edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory'
+				maxMicrosecondsPerInvocation='65186'
+				standardDeviationMicrosecondsPerInvocation='3432'
+				invocations='359'></ClassProfile>
+			<ClassProfile avgMicrosecondsPerInvocation='239'
+				totalMilliseconds='84'
+				name='edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory'
+				maxMicrosecondsPerInvocation='6226'
+				standardDeviationMicrosecondsPerInvocation='603'
+				invocations='351'></ClassProfile>
+			<ClassProfile avgMicrosecondsPerInvocation='233'
+				totalMilliseconds='81'
+				name='edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory'
+				maxMicrosecondsPerInvocation='14742'
+				standardDeviationMicrosecondsPerInvocation='815'
+				invocations='351'></ClassProfile>
+			<ClassProfile avgMicrosecondsPerInvocation='229'
+				totalMilliseconds='80'
+				name='edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory'
+				maxMicrosecondsPerInvocation='17377'
+				standardDeviationMicrosecondsPerInvocation='988'
+				invocations='351'></ClassProfile>
+			<ClassProfile avgMicrosecondsPerInvocation='714'
+				totalMilliseconds='66'
+				name='edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers'
+				maxMicrosecondsPerInvocation='10329'
+				standardDeviationMicrosecondsPerInvocation='1401'
+				invocations='93'></ClassProfile>
+			<ClassProfile avgMicrosecondsPerInvocation='99'
+				totalMilliseconds='63'
+				name='edu.umd.cs.findbugs.util.TopologicalSort'
+				maxMicrosecondsPerInvocation='11788'
+				standardDeviationMicrosecondsPerInvocation='489'
+				invocations='641'></ClassProfile>
+			<ClassProfile avgMicrosecondsPerInvocation='433'
+				totalMilliseconds='60'
+				name='edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine'
+				maxMicrosecondsPerInvocation='14676'
+				standardDeviationMicrosecondsPerInvocation='1471'
+				invocations='140'></ClassProfile>
+			<ClassProfile avgMicrosecondsPerInvocation='542'
+				totalMilliseconds='50'
+				name='edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures'
+				maxMicrosecondsPerInvocation='4985'
+				standardDeviationMicrosecondsPerInvocation='1002'
+				invocations='93'></ClassProfile>
+			<ClassProfile avgMicrosecondsPerInvocation='500'
+				totalMilliseconds='46'
+				name='edu.umd.cs.findbugs.detect.CalledMethods'
+				maxMicrosecondsPerInvocation='4700'
+				standardDeviationMicrosecondsPerInvocation='855'
+				invocations='93'></ClassProfile>
+			<ClassProfile avgMicrosecondsPerInvocation='486'
+				totalMilliseconds='45'
+				name='edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical'
+				maxMicrosecondsPerInvocation='10328'
+				standardDeviationMicrosecondsPerInvocation='1310'
+				invocations='93'></ClassProfile>
+			<ClassProfile avgMicrosecondsPerInvocation='444'
+				totalMilliseconds='41'
+				name='edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase'
+				maxMicrosecondsPerInvocation='5178'
+				standardDeviationMicrosecondsPerInvocation='775'
+				invocations='93'></ClassProfile>
+			<ClassProfile avgMicrosecondsPerInvocation='249'
+				totalMilliseconds='40'
+				name='edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis'
+				maxMicrosecondsPerInvocation='2536'
+				standardDeviationMicrosecondsPerInvocation='348'
+				invocations='161'></ClassProfile>
+			<ClassProfile avgMicrosecondsPerInvocation='349'
+				totalMilliseconds='32'
+				name='edu.umd.cs.findbugs.detect.BuildStringPassthruGraph'
+				maxMicrosecondsPerInvocation='5243'
+				standardDeviationMicrosecondsPerInvocation='787'
+				invocations='93'></ClassProfile>
+			<ClassProfile avgMicrosecondsPerInvocation='319'
+				totalMilliseconds='29'
+				name='edu.umd.cs.findbugs.detect.ReflectiveClasses'
+				maxMicrosecondsPerInvocation='2191'
+				standardDeviationMicrosecondsPerInvocation='554'
+				invocations='93'></ClassProfile>
+			<ClassProfile avgMicrosecondsPerInvocation='310'
+				totalMilliseconds='28'
+				name='edu.umd.cs.findbugs.detect.ExplicitSerialization'
+				maxMicrosecondsPerInvocation='6116'
+				standardDeviationMicrosecondsPerInvocation='1145'
+				invocations='93'></ClassProfile>
+			<ClassProfile avgMicrosecondsPerInvocation='801'
+				totalMilliseconds='28'
+				name='edu.umd.cs.findbugs.detect.NoteUnconditionalParamDerefs'
+				maxMicrosecondsPerInvocation='20739'
+				standardDeviationMicrosecondsPerInvocation='3400'
+				invocations='36'></ClassProfile>
+			<ClassProfile avgMicrosecondsPerInvocation='697'
+				totalMilliseconds='25'
+				name='edu.umd.cs.findbugs.detect.FindInconsistentSync2'
+				maxMicrosecondsPerInvocation='4835'
+				standardDeviationMicrosecondsPerInvocation='1077'
+				invocations='36'></ClassProfile>
+			<ClassProfile avgMicrosecondsPerInvocation='5'
+				totalMilliseconds='24'
+				name='edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase'
+				maxMicrosecondsPerInvocation='1387'
+				standardDeviationMicrosecondsPerInvocation='32'
+				invocations='4676'></ClassProfile>
+			<ClassProfile avgMicrosecondsPerInvocation='67'
+				totalMilliseconds='23'
+				name='edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory'
+				maxMicrosecondsPerInvocation='1735'
+				standardDeviationMicrosecondsPerInvocation='157'
+				invocations='351'></ClassProfile>
+		</FindBugsProfile>
+	</FindBugsSummary>
+	<ClassFeatures></ClassFeatures>
+	<History></History>
+</BugCollection>

@@ -1,6 +1,11 @@
 # Violations Maven Plugin
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/se.bjurr.violations/violations-maven-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/se.bjurr.violations/violations-maven-plugin)
 
+| Version           | Java Version |
+| ------------------| ------------ |
+| version < 2.2.0   | 8            |
+| 2.2.0 <= version  | 11           |
+
 This is a Maven plugin for [Violations Lib](https://github.com/tomasbjerre/violations-lib). There is also a [Gradle plugin](https://github.com/tomasbjerre/violations-gradle-plugin) and a [command line tool](https://www.npmjs.com/package/violations-command-line).
 
 It can parse results from static code analysis and:
