@@ -1,5 +1,27 @@
+# violations-maven-plugin changelog
 
-## 2.1.0 (2024-03-24)
+Changelog of violations-maven-plugin.
+
+## violations-maven-plugin-2.2.0 (2024-10-05)
+
+### Features
+
+-  stepping dependencies and using Java 11 ([8f23d](https://github.com/tomasbjerre/violations-maven-plugin/commit/8f23d4715639885) Tomas Bjerre)  
+
+### Other changes
+
+**[maven-release-plugin] prepare release violations-maven-plugin-2.2.0**
+
+
+[88c29](https://github.com/tomasbjerre/violations-maven-plugin/commit/88c2944be35c789) Tomas Bjerre *2024-10-05 18:29:24*
+
+**[maven-release-plugin] prepare for next development iteration**
+
+
+[ef39a](https://github.com/tomasbjerre/violations-maven-plugin/commit/ef39a786d706ca1) Tomas Bjerre *2024-03-24 17:26:58*
+
+
+## violations-maven-plugin-2.1.0 (2024-03-24)
 
 ### Features
 
@@ -18,7 +40,7 @@
 [6332a](https://github.com/tomasbjerre/violations-maven-plugin/commit/6332ae7c8e728e9) Tomas Bjerre *2024-01-27 08:02:56*
 
 
-## 2.0.0 (2024-01-27)
+## violations-maven-plugin-2.0.0 (2024-01-27)
 
 ### Breaking changes
 
@@ -37,7 +59,7 @@
 [47dc3](https://github.com/tomasbjerre/violations-maven-plugin/commit/47dc375b170b483) Tomas Bjerre *2023-09-17 12:05:05*
 
 
-## 1.50.9 (2023-09-17)
+## violations-maven-plugin-1.50.9 (2023-09-17)
 
 ### Bug Fixes
 
@@ -57,7 +79,7 @@
 [e8159](https://github.com/tomasbjerre/violations-maven-plugin/commit/e81599652bd1fba) Tomas Bjerre *2023-06-01 17:01:35*
 
 
-## 1.50.8 (2023-06-01)
+## violations-maven-plugin-1.50.8 (2023-06-01)
 
 ### Bug Fixes
 
@@ -76,7 +98,7 @@
 [c4ee9](https://github.com/tomasbjerre/violations-maven-plugin/commit/c4ee94ab94ada7b) Tomas Bjerre *2023-03-16 16:43:30*
 
 
-## 1.50.7 (2023-03-16)
+## violations-maven-plugin-1.50.7 (2023-03-16)
 
 ### Bug Fixes
 
@@ -95,7 +117,7 @@
 [13e38](https://github.com/tomasbjerre/violations-maven-plugin/commit/13e3879020a4c76) Tomas Bjerre *2023-02-26 19:51:06*
 
 
-## 1.50.6 (2023-02-26)
+## violations-maven-plugin-1.50.6 (2023-02-26)
 
 ### Bug Fixes
 
@@ -114,7 +136,7 @@
 [966a9](https://github.com/tomasbjerre/violations-maven-plugin/commit/966a9324ca6ec79) Tomas Bjerre *2023-01-15 12:17:11*
 
 
-## 1.50.5 (2023-01-15)
+## violations-maven-plugin-1.50.5 (2023-01-15)
 
 ### Bug Fixes
 
@@ -133,7 +155,7 @@
 [11695](https://github.com/tomasbjerre/violations-maven-plugin/commit/116954a9892af19) Tomas Bjerre *2022-09-25 08:04:17*
 
 
-## 1.50.4 (2022-09-25)
+## violations-maven-plugin-1.50.4 (2022-09-25)
 
 ### Bug Fixes
 
@@ -152,7 +174,7 @@
 [c1522](https://github.com/tomasbjerre/violations-maven-plugin/commit/c1522324d57d788) Tomas Bjerre *2022-09-24 16:40:44*
 
 
-## 1.50.3 (2022-09-24)
+## violations-maven-plugin-1.50.3 (2022-09-24)
 
 ### Bug Fixes
 
@@ -171,7 +193,7 @@
 [7e97f](https://github.com/tomasbjerre/violations-maven-plugin/commit/7e97f06762de03f) Tomas Bjerre *2022-09-24 14:30:03*
 
 
-## 1.50.2 (2022-09-24)
+## violations-maven-plugin-1.50.2 (2022-09-24)
 
 ### Bug Fixes
 
@@ -190,7 +212,7 @@
 [7e517](https://github.com/tomasbjerre/violations-maven-plugin/commit/7e517a6aeef4e31) Tomas Bjerre *2022-09-01 18:39:27*
 
 
-## 1.50.1 (2022-09-01)
+## violations-maven-plugin-1.50.1 (2022-09-01)
 
 ### Other changes
 
@@ -200,7 +222,7 @@
 [997d6](https://github.com/tomasbjerre/violations-maven-plugin/commit/997d695fac32b8c) Tomas Bjerre *2022-09-01 18:39:23*
 
 
-## refs/tags/1.50.0 (2022-09-01)
+## 1.50.0 (2022-09-01)
 
 ### Other changes
 
@@ -210,7 +232,7 @@
 [2c9a9](https://github.com/tomasbjerre/violations-maven-plugin/commit/2c9a9806dfd1a45) Tomas Bjerre *2022-09-01 18:37:35*
 
 
-## 1.0.1 (2022-09-01)
+## violations-maven-plugin-1.0.1 (2022-09-01)
 
 ### Other changes
 
@@ -220,7 +242,7 @@
 [924a8](https://github.com/tomasbjerre/violations-maven-plugin/commit/924a842456cb681) Tomas Bjerre *2022-09-01 18:37:31*
 
 
-## refs/tags/1.0.0 (2022-09-01)
+## 1.0.0 (2022-09-01)
 
 ### Other changes
 
@@ -230,7 +252,7 @@
 [04dc5](https://github.com/tomasbjerre/violations-maven-plugin/commit/04dc556cad9330c) Tomas Bjerre *2022-09-01 18:34:31*
 
 
-## 0.1.0 (2022-09-01)
+## violations-maven-plugin-0.1.0 (2022-09-01)
 
 ### Features
 
@@ -249,7 +271,7 @@
 [b7c7d](https://github.com/tomasbjerre/violations-maven-plugin/commit/b7c7dd252d35270) Tomas Bjerre *2022-03-27 07:27:50*
 
 
-## 1.50 (2022-03-27)
+## violations-maven-plugin-1.50 (2022-03-27)
 
 ### Other changes
 
@@ -264,7 +286,7 @@
 [d3f26](https://github.com/tomasbjerre/violations-maven-plugin/commit/d3f26860c19b5e2) Tomas Bjerre *2022-03-27 07:26:05*
 
 
-## 1.49 (2022-03-27)
+## violations-maven-plugin-1.49 (2022-03-27)
 
 ### Features
 
@@ -283,7 +305,7 @@
 [bcc49](https://github.com/tomasbjerre/violations-maven-plugin/commit/bcc493cf8a0e37f) Tomas Bjerre *2021-08-05 13:16:40*
 
 
-## 1.48 (2021-08-05)
+## violations-maven-plugin-1.48 (2021-08-05)
 
 ### Other changes
 
@@ -298,7 +320,7 @@
 [8526c](https://github.com/tomasbjerre/violations-maven-plugin/commit/8526cfebcfae89a) Tomas Bjerre *2021-08-05 13:10:43*
 
 
-## 1.47 (2021-08-05)
+## violations-maven-plugin-1.47 (2021-08-05)
 
 ### Other changes
 
@@ -313,7 +335,7 @@
 [c0be6](https://github.com/tomasbjerre/violations-maven-plugin/commit/c0be6485752096d) Tomas Bjerre *2021-08-05 13:09:38*
 
 
-## 1.46 (2021-08-05)
+## violations-maven-plugin-1.46 (2021-08-05)
 
 ### Other changes
 
@@ -328,7 +350,7 @@
 [01935](https://github.com/tomasbjerre/violations-maven-plugin/commit/019352e3ab0e01d) Tomas Bjerre *2021-08-05 13:06:26*
 
 
-## 1.45 (2021-08-05)
+## violations-maven-plugin-1.45 (2021-08-05)
 
 ### Other changes
 
@@ -343,7 +365,7 @@
 [0f362](https://github.com/tomasbjerre/violations-maven-plugin/commit/0f36250329e6733) Tomas Bjerre *2021-08-05 12:59:06*
 
 
-## 1.44 (2021-08-05)
+## violations-maven-plugin-1.44 (2021-08-05)
 
 ### Other changes
 
@@ -363,7 +385,7 @@
 [329b7](https://github.com/tomasbjerre/violations-maven-plugin/commit/329b7c5bb818c43) Tomas Bjerre *2021-03-29 15:02:42*
 
 
-## 1.43 (2021-03-29)
+## violations-maven-plugin-1.43 (2021-03-29)
 
 ### Other changes
 
@@ -383,7 +405,7 @@
 [a8cb2](https://github.com/tomasbjerre/violations-maven-plugin/commit/a8cb2a37387bd7d) Tomas Bjerre *2020-10-04 10:31:14*
 
 
-## 1.42 (2020-10-04)
+## violations-maven-plugin-1.42 (2020-10-04)
 
 ### Other changes
 
@@ -403,7 +425,7 @@
 [c55e8](https://github.com/tomasbjerre/violations-maven-plugin/commit/c55e86ae96fe70c) Tomas Bjerre *2020-10-04 07:27:55*
 
 
-## 1.41 (2020-10-04)
+## violations-maven-plugin-1.41 (2020-10-04)
 
 ### Other changes
 
@@ -423,7 +445,7 @@
 [fb48b](https://github.com/tomasbjerre/violations-maven-plugin/commit/fb48be031820194) Tomas Bjerre *2020-09-27 16:24:47*
 
 
-## 1.40 (2020-09-27)
+## violations-maven-plugin-1.40 (2020-09-27)
 
 ### Other changes
 
@@ -443,7 +465,7 @@
 [18953](https://github.com/tomasbjerre/violations-maven-plugin/commit/18953801ee5214a) Tomas Bjerre *2020-09-23 16:44:02*
 
 
-## 1.39 (2020-09-23)
+## violations-maven-plugin-1.39 (2020-09-23)
 
 ### Other changes
 
@@ -463,7 +485,7 @@
 [893d8](https://github.com/tomasbjerre/violations-maven-plugin/commit/893d804e4e4a54c) Tomas Bjerre *2020-09-20 13:17:20*
 
 
-## 1.38 (2020-09-20)
+## violations-maven-plugin-1.38 (2020-09-20)
 
 ### Other changes
 
@@ -483,7 +505,7 @@
 [1771a](https://github.com/tomasbjerre/violations-maven-plugin/commit/1771a604ecc78f7) Tomas Bjerre *2020-07-05 15:12:21*
 
 
-## 1.37 (2020-07-05)
+## violations-maven-plugin-1.37 (2020-07-05)
 
 ### Other changes
 
@@ -498,7 +520,7 @@
 [8b89f](https://github.com/tomasbjerre/violations-maven-plugin/commit/8b89fc32c93dcf4) Tomas Bjerre *2020-03-29 14:17:30*
 
 
-## 1.36 (2020-03-29)
+## violations-maven-plugin-1.36 (2020-03-29)
 
 ### Other changes
 
@@ -518,7 +540,7 @@
 [4a353](https://github.com/tomasbjerre/violations-maven-plugin/commit/4a353bc09eccaf4) Tomas Bjerre *2020-02-03 17:01:10*
 
 
-## 1.35 (2020-02-03)
+## violations-maven-plugin-1.35 (2020-02-03)
 
 ### Other changes
 
@@ -538,7 +560,7 @@
 [078f9](https://github.com/tomasbjerre/violations-maven-plugin/commit/078f9af2051006f) Tomas Bjerre *2020-01-19 16:01:33*
 
 
-## 1.34 (2020-01-19)
+## violations-maven-plugin-1.34 (2020-01-19)
 
 ### Other changes
 
@@ -563,7 +585,7 @@
 [0f2fe](https://github.com/tomasbjerre/violations-maven-plugin/commit/0f2fe961a1329e8) Tomas Bjerre *2020-01-19 09:29:40*
 
 
-## 1.33 (2020-01-19)
+## violations-maven-plugin-1.33 (2020-01-19)
 
 ### Other changes
 
@@ -583,7 +605,7 @@
 [0f361](https://github.com/tomasbjerre/violations-maven-plugin/commit/0f3616eba2d3b9a) Tomas Bjerre *2020-01-03 07:07:54*
 
 
-## 1.32 (2020-01-03)
+## violations-maven-plugin-1.32 (2020-01-03)
 
 ### Other changes
 
@@ -598,7 +620,7 @@
 [908e7](https://github.com/tomasbjerre/violations-maven-plugin/commit/908e7f196cbf7bd) Tomas Bjerre *2020-01-03 07:03:23*
 
 
-## 1.31 (2020-01-03)
+## violations-maven-plugin-1.31 (2020-01-03)
 
 ### Other changes
 
@@ -618,7 +640,7 @@
 [31ea8](https://github.com/tomasbjerre/violations-maven-plugin/commit/31ea8280be825b6) Tomas Bjerre *2019-10-22 03:43:26*
 
 
-## 1.30 (2019-10-22)
+## violations-maven-plugin-1.30 (2019-10-22)
 
 ### Other changes
 
@@ -638,7 +660,7 @@
 [773d7](https://github.com/tomasbjerre/violations-maven-plugin/commit/773d7c059863e6c) Tomas Bjerre *2019-10-10 16:02:32*
 
 
-## 1.29 (2019-10-10)
+## violations-maven-plugin-1.29 (2019-10-10)
 
 ### Other changes
 
@@ -658,7 +680,7 @@
 [05707](https://github.com/tomasbjerre/violations-maven-plugin/commit/057078a7bca136a) Tomas Bjerre *2019-10-09 16:34:58*
 
 
-## 1.28 (2019-10-09)
+## violations-maven-plugin-1.28 (2019-10-09)
 
 ### Other changes
 
@@ -678,7 +700,7 @@
 [ff6e3](https://github.com/tomasbjerre/violations-maven-plugin/commit/ff6e34a29ea62ee) Tomas Bjerre *2019-10-08 19:53:22*
 
 
-## 1.27 (2019-10-08)
+## violations-maven-plugin-1.27 (2019-10-08)
 
 ### Other changes
 
@@ -698,7 +720,7 @@
 [6f166](https://github.com/tomasbjerre/violations-maven-plugin/commit/6f1668e041d596c) Tomas Bjerre *2019-10-06 16:33:34*
 
 
-## 1.26 (2019-10-06)
+## violations-maven-plugin-1.26 (2019-10-06)
 
 ### Other changes
 
@@ -719,7 +741,7 @@
 [798fc](https://github.com/tomasbjerre/violations-maven-plugin/commit/798fc7d04c16ffe) Tomas Bjerre *2019-10-05 08:36:48*
 
 
-## 1.25 (2019-10-05)
+## violations-maven-plugin-1.25 (2019-10-05)
 
 ### Other changes
 
@@ -739,7 +761,7 @@
 [e84e5](https://github.com/tomasbjerre/violations-maven-plugin/commit/e84e556e69d2a55) Tomas Bjerre *2019-10-05 06:30:06*
 
 
-## 1.24 (2019-10-05)
+## violations-maven-plugin-1.24 (2019-10-05)
 
 ### Other changes
 
@@ -759,7 +781,7 @@
 [eca32](https://github.com/tomasbjerre/violations-maven-plugin/commit/eca3222fe806ebe) Tomas Bjerre *2019-10-04 14:57:10*
 
 
-## 1.23 (2019-10-04)
+## violations-maven-plugin-1.23 (2019-10-04)
 
 ### Other changes
 
@@ -779,7 +801,7 @@
 [a361b](https://github.com/tomasbjerre/violations-maven-plugin/commit/a361b4cf8ce13ed) Tomas Bjerre *2019-10-03 18:12:52*
 
 
-## 1.22 (2019-10-03)
+## violations-maven-plugin-1.22 (2019-10-03)
 
 ### Other changes
 
@@ -804,7 +826,7 @@
 [eb755](https://github.com/tomasbjerre/violations-maven-plugin/commit/eb755bf7a049299) Tomas Bjerre *2019-09-07 15:04:16*
 
 
-## 1.21 (2019-09-07)
+## violations-maven-plugin-1.21 (2019-09-07)
 
 ### Other changes
 
@@ -824,7 +846,7 @@
 [8b1fa](https://github.com/tomasbjerre/violations-maven-plugin/commit/8b1fa1370b6675d) Tomas Bjerre *2019-08-03 12:20:31*
 
 
-## 1.20 (2019-08-03)
+## violations-maven-plugin-1.20 (2019-08-03)
 
 ### Other changes
 
@@ -854,7 +876,7 @@
 [2d7be](https://github.com/tomasbjerre/violations-maven-plugin/commit/2d7bed6ca7244e0) Tomas Bjerre *2019-03-30 19:56:51*
 
 
-## 1.19 (2019-03-30)
+## violations-maven-plugin-1.19 (2019-03-30)
 
 ### Other changes
 
@@ -874,7 +896,7 @@
 [2b61b](https://github.com/tomasbjerre/violations-maven-plugin/commit/2b61bc3b3f40126) Tomas Bjerre *2019-03-23 14:58:44*
 
 
-## 1.18 (2019-03-23)
+## violations-maven-plugin-1.18 (2019-03-23)
 
 ### Other changes
 
@@ -894,7 +916,7 @@
 [15655](https://github.com/tomasbjerre/violations-maven-plugin/commit/156551ef67ef76d) Tomas Bjerre *2019-03-13 19:08:25*
 
 
-## 1.17 (2019-03-13)
+## violations-maven-plugin-1.17 (2019-03-13)
 
 ### Other changes
 
@@ -914,7 +936,7 @@
 [e536c](https://github.com/tomasbjerre/violations-maven-plugin/commit/e536c75bc20c77d) Tomas Bjerre *2019-03-07 15:33:52*
 
 
-## 1.16 (2019-03-07)
+## violations-maven-plugin-1.16 (2019-03-07)
 
 ### Other changes
 
@@ -934,7 +956,7 @@
 [64fa0](https://github.com/tomasbjerre/violations-maven-plugin/commit/64fa02adb9e6705) Tomas Bjerre *2019-01-14 17:20:18*
 
 
-## 1.15 (2019-01-14)
+## violations-maven-plugin-1.15 (2019-01-14)
 
 ### Other changes
 
@@ -954,7 +976,7 @@
 [014ce](https://github.com/tomasbjerre/violations-maven-plugin/commit/014ced74a98ea76) Tomas Bjerre *2019-01-09 18:55:50*
 
 
-## 1.14 (2019-01-09)
+## violations-maven-plugin-1.14 (2019-01-09)
 
 ### Other changes
 
@@ -994,7 +1016,7 @@
 [7bf79](https://github.com/tomasbjerre/violations-maven-plugin/commit/7bf790a03abb6b7) Tomas Bjerre *2018-09-20 23:48:21*
 
 
-## 1.13 (2018-09-20)
+## violations-maven-plugin-1.13 (2018-09-20)
 
 ### Other changes
 
@@ -1014,7 +1036,7 @@
 [bee97](https://github.com/tomasbjerre/violations-maven-plugin/commit/bee978b46313484) Tomas Bjerre *2018-09-20 14:04:04*
 
 
-## 1.12 (2018-09-20)
+## violations-maven-plugin-1.12 (2018-09-20)
 
 ### Other changes
 
@@ -1034,7 +1056,7 @@
 [3b565](https://github.com/tomasbjerre/violations-maven-plugin/commit/3b56511657e51f0) Tomas Bjerre *2018-09-17 13:19:17*
 
 
-## 1.11 (2018-09-17)
+## violations-maven-plugin-1.11 (2018-09-17)
 
 ### Other changes
 
@@ -1054,7 +1076,7 @@
 [1fbfe](https://github.com/tomasbjerre/violations-maven-plugin/commit/1fbfe4a96f28052) Tomas Bjerre *2018-09-15 07:50:55*
 
 
-## 1.10 (2018-09-15)
+## violations-maven-plugin-1.10 (2018-09-15)
 
 ### Other changes
 
@@ -1074,7 +1096,7 @@
 [a606b](https://github.com/tomasbjerre/violations-maven-plugin/commit/a606bf59efc425c) Tomas Bjerre *2018-09-12 20:54:58*
 
 
-## 1.9 (2018-09-12)
+## violations-maven-plugin-1.9 (2018-09-12)
 
 ### Other changes
 
@@ -1104,7 +1126,7 @@
 [4facf](https://github.com/tomasbjerre/violations-maven-plugin/commit/4facf8403d520ab) Tomas Bjerre *2018-02-13 18:43:15*
 
 
-## 1.8 (2018-02-13)
+## violations-maven-plugin-1.8 (2018-02-13)
 
 ### Other changes
 
@@ -1124,7 +1146,7 @@
 [e3049](https://github.com/tomasbjerre/violations-maven-plugin/commit/e304946b80d5821) Tomas Bjerre *2018-01-14 11:34:38*
 
 
-## 1.7 (2018-01-14)
+## violations-maven-plugin-1.7 (2018-01-14)
 
 ### Other changes
 
@@ -1149,7 +1171,7 @@
 [7d56f](https://github.com/tomasbjerre/violations-maven-plugin/commit/7d56ffc4f43923a) Tomas Bjerre *2018-01-13 19:39:07*
 
 
-## 1.6 (2018-01-13)
+## violations-maven-plugin-1.6 (2018-01-13)
 
 ### Other changes
 
@@ -1169,7 +1191,7 @@
 [848f0](https://github.com/tomasbjerre/violations-maven-plugin/commit/848f08f65fe2e23) Tomas Bjerre *2018-01-04 17:38:23*
 
 
-## 1.5 (2017-12-31)
+## violations-maven-plugin-1.5 (2017-12-31)
 
 ### Other changes
 
@@ -1194,7 +1216,7 @@
 [99cea](https://github.com/tomasbjerre/violations-maven-plugin/commit/99cea0af18a04b9) Tomas Bjerre *2017-12-30 16:38:14*
 
 
-## 1.4 (2017-12-30)
+## violations-maven-plugin-1.4 (2017-12-30)
 
 ### Other changes
 
@@ -1219,7 +1241,7 @@
 [8f2d0](https://github.com/tomasbjerre/violations-maven-plugin/commit/8f2d01631b255c6) Tomas Bjerre *2017-12-25 19:24:40*
 
 
-## 1.3 (2017-12-25)
+## violations-maven-plugin-1.3 (2017-12-25)
 
 ### Other changes
 
@@ -1244,7 +1266,7 @@
 [874d8](https://github.com/tomasbjerre/violations-maven-plugin/commit/874d8be2fd0b7b2) Tomas Bjerre *2017-12-25 06:55:39*
 
 
-## 1.2 (2017-12-25)
+## violations-maven-plugin-1.2 (2017-12-25)
 
 ### Other changes
 
@@ -1264,7 +1286,7 @@
 [4da9d](https://github.com/tomasbjerre/violations-maven-plugin/commit/4da9d56efcf6174) Tomas Bjerre *2017-12-24 17:24:39*
 
 
-## 1.1 (2017-12-24)
+## violations-maven-plugin-1.1 (2017-12-24)
 
 ### Other changes
 
@@ -1289,7 +1311,7 @@
 [3e010](https://github.com/tomasbjerre/violations-maven-plugin/commit/3e01047832a8a53) Tomas Bjerre *2017-12-24 16:06:46*
 
 
-## 1.0 (2017-12-24)
+## violations-maven-plugin-1.0 (2017-12-24)
 
 ### Other changes
 
