@@ -2,6 +2,28 @@
 
 Changelog of violations-maven-plugin.
 
+## violations-maven-plugin-2.2.2 (2025-05-10)
+
+### Bug Fixes
+
+-  setting version in pom ([fab82](https://github.com/tomasbjerre/violations-maven-plugin/commit/fab823cbdb90104) Tomas Bjerre)  
+
+### Dependency updates
+
+- dependencies ([19b6e](https://github.com/tomasbjerre/violations-maven-plugin/commit/19b6e7fc706ae80) Tomas Bjerre)  
+### Other changes
+
+**[maven-release-plugin] prepare release violations-maven-plugin-2.2.2**
+
+
+[05f17](https://github.com/tomasbjerre/violations-maven-plugin/commit/05f1734c777fcc0) Tomas Bjerre *2025-05-10 17:34:58*
+
+**[maven-release-plugin] prepare for next development iteration**
+
+
+[fa7b3](https://github.com/tomasbjerre/violations-maven-plugin/commit/fa7b33741054550) Tomas Bjerre *2024-10-05 18:29:28*
+
+
 ## violations-maven-plugin-2.2.0 (2024-10-05)
 
 ### Features
