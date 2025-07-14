@@ -39,7 +39,7 @@
 		<maven.compiler.target>11</maven.compiler.target>
 		<maven.compiler.source>11</maven.compiler.source>
 		<changelog>2.2.5</changelog>
-		<violations>2.3.5</violations>
+		<violations>2.3.6</violations>
 	</properties>
 
 	<dependencies>
