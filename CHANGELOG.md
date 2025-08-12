@@ -2,6 +2,11 @@
 
 Changelog of violations-maven-plugin.
 
+## 2.2.9 (2025-08-12)
+
+### Dependency updates
+
+- jgit:7.3.0.202506031305-r ([2ec37](https://github.com/tomasbjerre/violations-maven-plugin/commit/2ec37bef1ccfcc3) Tomas Bjerre)  
 ## 2.2.8 (2025-07-28)
 
 ### Dependency updates
