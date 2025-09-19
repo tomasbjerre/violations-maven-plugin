@@ -2,6 +2,12 @@
 
 Changelog of violations-maven-plugin.
 
+## 3.0.0 (2025-09-19)
+
+### Breaking changes
+
+-  using violations-git-lib with transitives, easier vulnerability scans ([a7f6f](https://github.com/tomasbjerre/violations-maven-plugin/commit/a7f6f3ef2c05ed9) Tomas Bjerre)  
+
 ## 2.2.9 (2025-08-12)
 
 ### Dependency updates
