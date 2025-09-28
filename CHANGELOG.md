@@ -2,6 +2,15 @@
 
 Changelog of violations-maven-plugin.
 
+## 3.1.0 (2025-09-28)
+
+### Features
+
+-  PMDCPD 7 ([d495d](https://github.com/tomasbjerre/violations-maven-plugin/commit/d495d2ec628e587) Tomas Bjerre)  
+
+### Dependency updates
+
+- parent ([5e162](https://github.com/tomasbjerre/violations-maven-plugin/commit/5e162b911dfa9ba) Tomas Bjerre)  
 ## 3.0.0 (2025-09-19)
 
 ### Breaking changes
