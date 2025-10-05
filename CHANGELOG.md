@@ -2,6 +2,12 @@
 
 Changelog of violations-maven-plugin.
 
+## 3.1.1 (2025-10-05)
+
+### Bug Fixes
+
+-  docfx message_severity ([ff679](https://github.com/tomasbjerre/violations-maven-plugin/commit/ff679c0164991b4) Tomas Bjerre)  
+
 ## 3.1.0 (2025-09-28)
 
 ### Features
