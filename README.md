@@ -4,7 +4,8 @@
 | Version           | Java Version |
 | ------------------| ------------ |
 | version < 2.2.0   | 8            |
-| 2.2.0 <= version  | 11           |
+| 2.2.0 - 3.1.1     | 11           |
+| 3.1.1 <= version  | 17           |
 
 This is a Maven plugin for [Violations Lib](https://github.com/tomasbjerre/violations-lib). There is also a [Gradle plugin](https://github.com/tomasbjerre/violations-gradle-plugin) and a [command line tool](https://www.npmjs.com/package/violations-command-line).
 
