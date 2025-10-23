@@ -30,7 +30,7 @@ import se.bjurr.violations.lib.model.codeclimate.CodeClimateTransformer;
 import se.bjurr.violations.lib.util.Filtering;
 import se.bjurr.violations.violationslib.com.google.gson.GsonBuilder;
 
-@Mojo(name = "violations", defaultPhase = VALIDATE)
+@Mojo(name = "violations", defaultPhase = VALIDATE, threadSafe = true)
 public class ViolationCommentsMojo extends AbstractMojo {
 
   @Parameter(property = "printViolations", required = false, defaultValue = "true")
