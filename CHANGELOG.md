@@ -2,6 +2,12 @@
 
 Changelog of violations-maven-plugin.
 
+## 3.1.2 (2025-10-23)
+
+### Bug Fixes
+
+-  marking it as thread safe ([763e5](https://github.com/tomasbjerre/violations-maven-plugin/commit/763e5b706d8e05f) Tomas Bjerre)  
+
 ## 3.1.1 (2025-10-05)
 
 ### Bug Fixes
