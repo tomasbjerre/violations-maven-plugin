@@ -2,6 +2,12 @@
 
 Changelog of violations-maven-plugin.
 
+## 3.2.0 (2026-09-13)
+
+### Features
+
+-  replacing gson with jackson ([4f592](https://github.com/tomasbjerre/violations-maven-plugin/commit/4f5920ebbdf988f) Tomas Bjerre)  
+
 ## 3.1.2 (2025-10-23)
 
 ### Bug Fixes
