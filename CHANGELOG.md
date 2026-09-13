@@ -2,6 +2,28 @@
 
 Changelog of violations-maven-plugin.
 
+## 3.2.1 (2026-09-13)
+
+### Bug Fixes
+
+-  resolve spotbugs violations in ViolationCommentsMojo ([0d799](https://github.com/tomasbjerre/violations-maven-plugin/commit/0d799d5e26d8e33) Tomas Bjerre)  
+
+### Dependency updates
+
+- update dependencies ([ab578](https://github.com/tomasbjerre/violations-maven-plugin/commit/ab57864e0ea65be) Tomas Bjerre)  
+- update junit, assertj-core and maven-plugin-plugin ([ee50a](https://github.com/tomasbjerre/violations-maven-plugin/commit/ee50a861b5eba73) Tomas Bjerre)  
+### Other changes
+
+**Fix broken Maven Central badge in README**
+
+* maven-badges.herokuapp.com is down; switch to img.shields.io badge 
+* linking to search.maven.org. 
+* Co-Authored-By: Claude Sonnet 5 &lt;noreply@anthropic.com&gt; 
+* Claude-Session: https://claude.ai/code/session_011PGVf85V1VhJj4oM3rKh7b 
+
+[79aa3](https://github.com/tomasbjerre/violations-maven-plugin/commit/79aa3577454eb19) Tomas Bjerre *2026-09-13 08:52:01*
+
+
 ## 3.2.0 (2026-09-13)
 
 ### Features
