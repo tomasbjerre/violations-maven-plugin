@@ -28,7 +28,7 @@ import se.bjurr.violations.lib.model.SEVERITY;
 import se.bjurr.violations.lib.model.Violation;
 import se.bjurr.violations.lib.model.codeclimate.CodeClimateTransformer;
 import se.bjurr.violations.lib.util.Filtering;
-import se.bjurr.violations.violationslib.com.google.gson.GsonBuilder;
+import se.bjurr.violations.lib.util.JsonMappers;
 
 @Mojo(name = "violations", defaultPhase = VALIDATE, threadSafe = true)
 public class ViolationCommentsMojo extends AbstractMojo {
@@ -182,7 +182,8 @@ public class ViolationCommentsMojo extends AbstractMojo {
   }
 
   private void createJsonFile(final Object object, final File file) throws IOException {
-    final String codeClimateReport = new GsonBuilder().setPrettyPrinting().create().toJson(object);
+    final String codeClimateReport =
+        JsonMappers.JSON_MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(object);
     final Path path = file.toPath();
     path.toFile().getParentFile().mkdirs();
     Files.write(

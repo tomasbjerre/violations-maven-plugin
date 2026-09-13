@@ -26,7 +26,7 @@
     <maven.compiler.target>17</maven.compiler.target>
     <maven.compiler.source>17</maven.compiler.source>
     <changelog>2.2.5</changelog>
-    <violations>2.5.1</violations>
+    <violations>2.5.9</violations>
   </properties>
 
   <dependencies>
