@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
@@ -105,7 +106,7 @@ public class ViolationCommentsMojo extends AbstractMojo {
   }
 
   public void setViolations(final List<ViolationConfig> violations) {
-    this.violations = violations;
+    this.violations = new ArrayList<>(violations);
   }
 
   @Override
@@ -185,7 +186,13 @@ public class ViolationCommentsMojo extends AbstractMojo {
     final String codeClimateReport =
         JsonMappers.JSON_MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(object);
     final Path path = file.toPath();
-    path.toFile().getParentFile().mkdirs();
+    final File parentFile = path.toFile().getParentFile();
+    if (parentFile != null
+        && !parentFile.isDirectory()
+        && !parentFile.mkdirs()
+        && !parentFile.isDirectory()) {
+      throw new IOException("Could not create directory " + parentFile);
+    }
     Files.write(
         path, codeClimateReport.getBytes(StandardCharsets.UTF_8), TRUNCATE_EXISTING, CREATE, WRITE);
   }
