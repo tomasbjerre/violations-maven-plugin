@@ -1,5 +1,5 @@
 # Violations Maven Plugin
-[![Maven Central](https://img.shields.io/maven-central/v/se.bjurr.violations/violations-maven-plugin.svg?label=Maven%20Central)](https://search.maven.org/artifact/se.bjurr.violations/violations-maven-plugin)
+[![Maven Central](https://img.shields.io/maven-central/v/se.bjurr.violations/violations-maven-plugin.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/se.bjurr.violations/violations-maven-plugin)
 
 | Version           | Java Version |
 | ------------------| ------------ |
