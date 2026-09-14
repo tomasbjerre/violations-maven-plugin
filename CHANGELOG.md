@@ -1,3 +1,41 @@
+## 3.3.0 (2026-09-14)
+
+### Features
+
+-  **ci**  add draft/publish release workflow ([044d2](https://github.com/tomasbjerre/violations-maven-plugin/commit/044d2b3a5fe2774) Tomas Bjerre)  
+
+### Dependency updates
+
+- se.bjurr.violations:violations-lib:2.1.0 -> 2.2.0 ([c22e9](https://github.com/tomasbjerre/violations-maven-plugin/commit/c22e9db3b70044b) Tomas Bjerre)  
+- migrate from JUnit 4 to JUnit 6 ([a3666](https://github.com/tomasbjerre/violations-maven-plugin/commit/a3666d92b8d7281) Tomas Bjerre)  
+### Other changes
+
+**Add 10-day minimumReleaseAge to reduce supply-chain risk from very-fresh releases**
+
+
+[4d246](https://github.com/tomasbjerre/violations-maven-plugin/commit/4d246154d26ec50) Tomas Bjerre *2026-09-14 18:48:04*
+
+**Real CI now exists, allow automerge again**
+
+
+[47f85](https://github.com/tomasbjerre/violations-maven-plugin/commit/47f8525faa7ffce) Tomas Bjerre *2026-09-14 18:22:48*
+
+**Add PR CI via shared bundle-maven-ci workflow**
+
+
+[e9a5b](https://github.com/tomasbjerre/violations-maven-plugin/commit/e9a5bd8e2a93c55) Tomas Bjerre *2026-09-14 18:22:45*
+
+**No CI in this repo, never automerge dependency PRs here**
+
+
+[4d943](https://github.com/tomasbjerre/violations-maven-plugin/commit/4d943a18a9c994c) Tomas Bjerre *2026-09-14 18:02:36*
+
+**[maven-release-plugin] prepare for next development iteration**
+
+
+[51809](https://github.com/tomasbjerre/violations-maven-plugin/commit/5180936da4d8f74) Tomas Bjerre *2026-09-13 18:31:22*
+
+
 # violations-maven-plugin changelog
 
 Changelog of violations-maven-plugin.
