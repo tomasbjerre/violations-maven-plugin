@@ -1,7 +1,7 @@
 package se.bjurr.violations.maven.plugin;
 
 import java.io.IOException;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import se.bjurr.violations.lib.util.Utils;
 
 public class UpdateReadmeTest {

@@ -1,20 +1,17 @@
 package se.bjurr.violations.maven.plugin;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.Assert.*;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 import java.io.File;
 import java.net.URI;
 import java.util.Arrays;
 import org.apache.maven.plugin.MojoExecutionException;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
+import org.junit.jupiter.api.Test;
 import se.bjurr.violations.git.ViolationsReporterDetailLevel;
 import se.bjurr.violations.lib.reports.Parser;
 
 public class ViolationCommentsMojoTest {
-  @Rule public ExpectedException expectedEx = ExpectedException.none();
 
   public String getTestResources() throws Exception {
     URI uri = ViolationCommentsMojoTest.class.getResource("/spotbugsXml.xml").toURI();
@@ -63,9 +60,6 @@ public class ViolationCommentsMojoTest {
 
   @Test
   public void testThatItFails() throws Exception {
-    expectedEx.expect(MojoExecutionException.class);
-    expectedEx.expectMessage("Too many violations found, max is 0 but found 7");
-
     ViolationCommentsMojo sut = new ViolationCommentsMojo();
     sut.setMaxViolations(0);
     setupViolationPatterns(sut);
@@ -73,7 +67,9 @@ public class ViolationCommentsMojoTest {
     RecordingLog recordingLog = new RecordingLog();
     sut.setLog(recordingLog);
 
-    sut.execute();
+    assertThatThrownBy(sut::execute)
+        .isInstanceOf(MojoExecutionException.class)
+        .hasMessageContaining("Too many violations found, max is 0 but found 7");
   }
 
   private void setupViolationPatterns(ViolationCommentsMojo sut) throws Exception {
