@@ -59,6 +59,27 @@ public class ViolationCommentsMojoTest {
   }
 
   @Test
+  public void testThatNothingIsPrintedWhenThereAreNoViolations() throws Exception {
+    ViolationCommentsMojo sut = new ViolationCommentsMojo();
+    sut.setMaxViolations(99999);
+
+    ViolationConfig vc = new ViolationConfig();
+    vc.setFolder(getTestResources());
+    vc.setParser(Parser.CHECKSTYLE);
+    vc.setPattern(".*/nonexistent-report\\.xml");
+    vc.setReporter("Checkstyle");
+    sut.setViolations(Arrays.asList(vc));
+
+    sut.setPrintViolations(true);
+    RecordingLog recordingLog = new RecordingLog();
+    sut.setLog(recordingLog);
+
+    sut.execute();
+
+    assertThat(recordingLog.getInfo().toString()).doesNotContain("Violations in repo");
+  }
+
+  @Test
   public void testThatItFails() throws Exception {
     ViolationCommentsMojo sut = new ViolationCommentsMojo();
     sut.setMaxViolations(0);
