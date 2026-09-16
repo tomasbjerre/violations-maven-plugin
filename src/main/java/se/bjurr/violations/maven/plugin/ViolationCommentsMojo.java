@@ -222,7 +222,7 @@ public class ViolationCommentsMojo extends AbstractMojo {
               + violations.size()
               + ". You can adjust this with the 'maxViolations' configuration parameter.");
     } else {
-      if (this.printViolations) {
+      if (this.printViolations && !violations.isEmpty()) {
         this.getLog().info("\nViolations in repo\n\n" + report);
       }
     }
@@ -253,7 +253,7 @@ public class ViolationCommentsMojo extends AbstractMojo {
               + violations.size()
               + ". You can adjust this with the 'maxViolations' configuration parameter.");
     } else {
-      if (this.diffPrintViolations) {
+      if (this.diffPrintViolations && !violations.isEmpty()) {
         this.getLog().info("\nViolations in diff\n\n" + report);
       }
     }
