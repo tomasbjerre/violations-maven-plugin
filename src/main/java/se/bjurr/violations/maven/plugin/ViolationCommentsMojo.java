@@ -99,6 +99,12 @@ public class ViolationCommentsMojo extends AbstractMojo {
   @Parameter(property = "violationsFile", required = false)
   private File violationsFile;
 
+  @Parameter(property = "diffCodeClimateFile", required = false)
+  private File diffCodeClimateFile;
+
+  @Parameter(property = "diffViolationsFile", required = false)
+  private File diffViolationsFile;
+
   private ViolationsLogger violationsLogger;
 
   public void setMaxViolations(final Integer maxViolations) {
@@ -178,6 +184,14 @@ public class ViolationCommentsMojo extends AbstractMojo {
     }
     this.checkGlobalViolations(allParsedViolations);
     if (this.shouldCheckDiff()) {
+      if (this.diffCodeClimateFile != null) {
+        this.createJsonFile(
+            CodeClimateTransformer.fromViolations(allParsedViolationsInDiff),
+            this.diffCodeClimateFile);
+      }
+      if (this.diffViolationsFile != null) {
+        this.createJsonFile(allParsedViolationsInDiff, this.diffViolationsFile);
+      }
       this.checkDiffViolations(allParsedViolationsInDiff);
     }
   }
