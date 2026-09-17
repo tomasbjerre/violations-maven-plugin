@@ -204,6 +204,8 @@ The plugin needs to run after any static code analysis tools, so put it after th
        <codeClimateFile>code-climate-file.json</codeClimateFile>
        <!-- Will create a normalized JSON report. -->
        <violationsFile>violations-file.json</violationsFile>
+       <!-- Will create a SARIF JSON report. -->
+       <sarifFile>sarif-file.json</sarifFile>
      
        <!-- Diff configuration, remove if you dont want to report violations 
             for files changed between specific revisions. -->
@@ -223,6 +225,8 @@ The plugin needs to run after any static code analysis tools, so put it after th
        <diffCodeClimateFile>diff-code-climate-file.json</diffCodeClimateFile>
        <!-- Will create a normalized JSON report with only the violations found in the diff. -->
        <diffViolationsFile>diff-violations-file.json</diffViolationsFile>
+       <!-- Will create a SARIF JSON report with only the violations found in the diff. -->
+       <diffSarifFile>diff-sarif-file.json</diffSarifFile>
        <!-- Where to look for Git -->
        <gitRepo>.</gitRepo>
      
