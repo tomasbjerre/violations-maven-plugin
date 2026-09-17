@@ -28,6 +28,7 @@ import se.bjurr.violations.lib.ViolationsLogger;
 import se.bjurr.violations.lib.model.SEVERITY;
 import se.bjurr.violations.lib.model.Violation;
 import se.bjurr.violations.lib.model.codeclimate.CodeClimateTransformer;
+import se.bjurr.violations.lib.model.sarif.SarifTransformer;
 import se.bjurr.violations.lib.util.Filtering;
 import se.bjurr.violations.lib.util.JsonMappers;
 
@@ -104,6 +105,12 @@ public class ViolationCommentsMojo extends AbstractMojo {
 
   @Parameter(property = "diffViolationsFile", required = false)
   private File diffViolationsFile;
+
+  @Parameter(property = "sarifFile", required = false)
+  private File sarifFile;
+
+  @Parameter(property = "diffSarifFile", required = false)
+  private File diffSarifFile;
 
   private ViolationsLogger violationsLogger;
 
@@ -182,6 +189,9 @@ public class ViolationCommentsMojo extends AbstractMojo {
     if (this.violationsFile != null) {
       this.createJsonFile(allParsedViolations, this.violationsFile);
     }
+    if (this.sarifFile != null) {
+      this.createJsonFile(SarifTransformer.fromViolations(allParsedViolations), this.sarifFile);
+    }
     this.checkGlobalViolations(allParsedViolations);
     if (this.shouldCheckDiff()) {
       if (this.diffCodeClimateFile != null) {
@@ -191,6 +201,10 @@ public class ViolationCommentsMojo extends AbstractMojo {
       }
       if (this.diffViolationsFile != null) {
         this.createJsonFile(allParsedViolationsInDiff, this.diffViolationsFile);
+      }
+      if (this.diffSarifFile != null) {
+        this.createJsonFile(
+            SarifTransformer.fromViolations(allParsedViolationsInDiff), this.diffSarifFile);
       }
       this.checkDiffViolations(allParsedViolationsInDiff);
     }
