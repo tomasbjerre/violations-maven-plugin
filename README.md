@@ -219,6 +219,10 @@ The plugin needs to run after any static code analysis tools, so put it after th
        <diffMaxViolations>99</diffMaxViolations>
        <!-- Will print violations found in diff -->
        <diffPrintViolations>true</diffPrintViolations>
+       <!-- Will create a CodeClimate JSON report with only the violations found in the diff. -->
+       <diffCodeClimateFile>diff-code-climate-file.json</diffCodeClimateFile>
+       <!-- Will create a normalized JSON report with only the violations found in the diff. -->
+       <diffViolationsFile>diff-violations-file.json</diffViolationsFile>
        <!-- Where to look for Git -->
        <gitRepo>.</gitRepo>
      
