@@ -1,3 +1,46 @@
+## 3.4.0 (2026-09-18)
+
+### Features
+
+-  add sarifFile and diffSarifFile options (#14) ([24c02](https://github.com/tomasbjerre/violations-maven-plugin/commit/24c022749bd67bb) Tomas Bjerre)  
+-  add diffCodeClimateFile and diffViolationsFile options (#13) ([b9a97](https://github.com/tomasbjerre/violations-maven-plugin/commit/b9a97b646cdc1fa) Tomas Bjerre)  
+
+### Bug Fixes
+
+-  skip printing the report when there are zero violations ([88355](https://github.com/tomasbjerre/violations-maven-plugin/commit/883557f4f3eb342) Tomas Bjerre)  
+
+### Dependency updates
+
+- update dependency se.bjurr.violations:violations-git-lib-transitives to v2.7.1 (#18) ([5b644](https://github.com/tomasbjerre/violations-maven-plugin/commit/5b6448c22427188) renovate[bot])  
+- update dependency se.bjurr.violations:violations-maven-plugin to v3.3.0 (#17) ([c71a7](https://github.com/tomasbjerre/violations-maven-plugin/commit/c71a7f7e8645e0c) renovate[bot])  
+- update dependency se.bjurr.maven:bjurr-maven-plugin-parent to v1.2.2 (#16) ([d6974](https://github.com/tomasbjerre/violations-maven-plugin/commit/d6974670604a426) renovate[bot])  
+- update dependency org.apache.maven.plugins:maven-plugin-plugin to v3.16.0 (#15) ([8b188](https://github.com/tomasbjerre/violations-maven-plugin/commit/8b188ff9bfc4a75) renovate[bot])  
+- update dependency maven-wrapper to v3.3.4 (#12) ([f1da8](https://github.com/tomasbjerre/violations-maven-plugin/commit/f1da8fd7a31f12c) renovate[bot])  
+- update dependency maven to v3.9.16 (#11) ([77b7b](https://github.com/tomasbjerre/violations-maven-plugin/commit/77b7bcac58c09db) renovate[bot])  
+### Other changes
+
+**Merge pull request #10 from tomasbjerre/feature/skip-empty-violations-output**
+
+* fix: skip printing the report when there are zero violations 
+
+[9c5c7](https://github.com/tomasbjerre/violations-maven-plugin/commit/9c5c7b4752af9ac) Tomas Bjerre *2026-09-16 17:48:47*
+
+**Superseded by centralized publish-draft-releases.yaml in .github**
+
+
+[d62d6](https://github.com/tomasbjerre/violations-maven-plugin/commit/d62d69e865173fc) Tomas Bjerre *2026-09-14 19:58:59*
+
+**Auto-publish pending draft releases weekly**
+
+
+[80da4](https://github.com/tomasbjerre/violations-maven-plugin/commit/80da47c305ada4f) Tomas Bjerre *2026-09-14 19:47:54*
+
+**Remove accidentally-recreated override; this repo has real CI and should inherit full automerge from the account default**
+
+
+[007de](https://github.com/tomasbjerre/violations-maven-plugin/commit/007deca7f9f8df1) Tomas Bjerre *2026-09-14 19:36:49*
+
+
 ## 3.3.0 (2026-09-14)
 
 ### Features
