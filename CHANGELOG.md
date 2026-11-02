@@ -1,3 +1,9 @@
+## 3.4.2 (2026-11-02)
+
+### Bug Fixes
+
+-  bump bjurr-maven-plugin-parent to 1.2.4 ([5ca8d](https://github.com/tomasbjerre/violations-maven-plugin/commit/5ca8dd8d1469ed2) Tomas Bjerre)  
+
 ## 3.4.0 (2026-09-18)
 
 ### Features
